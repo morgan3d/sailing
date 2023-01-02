@@ -9,7 +9,7 @@ document.write(`
 <table><tr valign=top><td>
 <img src="${baseURL}/portrait.jpg" width=370px>
 </td><td width=30px> </td><td><i style="font-size:95%">
-This article is part of <a href="https://casual-effects.com">Morgan</a>'s <a href="${baseURL}/index.html">notes on sailing</a>.
+This article is part of <a href="https://casual-effects.com">Morgan</a>'s <a href="${baseURL}/index.md.html">notes on sailing</a>.
 <br>
 <br>&copy; 2022-2023 Morgan McGuire.
 The work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>,

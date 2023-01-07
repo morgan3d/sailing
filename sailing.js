@@ -3,13 +3,13 @@ var baseURL = location.href.replace(/\/sailing\/.*/, '/sailing');
 
 document.write(`
 <span class="md"><a style="text-decoration:none" href="${baseURL}/index.md.html"><div style="position: absolute; left: 0px; top: 0px; width:100%; height: 60px; background: url('${baseURL}/header.jpg'); text-shadow: #2EB3AA 0px 0px 6px; background-size: cover; background-repeat: repeat no-repeat"></div></a></span>
-<span class="md"><a style="text-decoration:none" href="${baseURL}/index.md.html"><div style=" filter: drop-shadow(0px 1px 3px #333); position: absolute; top: 0px; height: 60px; background-size: cover; background-repeat: no-repeat repeat; font-size: 40px; padding-top: 13px; color: #FFF"><img style="margin-left: -57px; top: 5px; position: absolute" width=50 height=50 src="${baseURL}/fat-compass-rose.png"><b style="margin-left:-2px">Notes on Sailing</b></div></a></span>
+<span class="md"><a style="text-decoration:none" href="${baseURL}/index.md.html"><div style=" filter: drop-shadow(0px 1px 3px #333); position: absolute; top: 0px; height: 60px; background-size: cover; background-repeat: no-repeat repeat; font-size: 40px; padding-top: 13px; color: #FFF"><img style="margin-left: -57px; top: 5px; position: absolute" width=50 height=50 src="${baseURL}/fat-compass-rose.png"><b style="margin-left:-2px">The Sailing Codex</b></div></a></span>
 
 <div style="border-top: solid 1px; padding-top:10px" class="md">
 <table><tr valign=top><td>
 <img src="${baseURL}/portrait.jpg" width=370px>
 </td><td width=30px> </td><td><i style="font-size:95%">
-This article is part of <a href="https://casual-effects.com">Morgan</a>'s <a href="${baseURL}/index.md.html">notes on sailing</a>.
+This article is part of <a href="https://casual-effects.com">Morgan</a>'s <a href="${baseURL}/index.md.html">Sailing Codex</a> set of notes.
 <br>
 <br>&copy; 2022-2023 Morgan McGuire.
 The work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>,

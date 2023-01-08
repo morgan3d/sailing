@@ -17,17 +17,17 @@ excepting portions credited to other sources. <a rel="license" href="http://crea
 </i>
 </td></tr></table>
 <p style="font-size: 60%; line-height: 110%">
-<b>DISCLAIMER</b>. The contents of these articles are presented as informaton only, and this creator makes
+<b>DISCLAIMER</b>. The contents of these articles is presented as information only, and Morgan McGuire (the Author) makes
 no claims, promises, or guarantees about the accuracy, completeness, adequacy, or
-applicability of the procedures, instructions, and opinions herein. The creator
-of this content expressly disclaims liability for errors and omissions that any readers
+applicability of the procedures, instructions, and opinions herein. The Author
+expressly disclaims liability for errors and omissions that any readers
 might declare to exist in the information presented. No liability exists or can be
-ascribed to this creator in the event of any accident, loss, or injury that might
+ascribed to the Author in the event of any accident, loss, or injury that might
 occur as a result of errors or improper application or understanding of
 the information provided. Use at your own risk.
-Confirm everything with other sources, local experts, and your own experimentation. Be aware
-of your environment and conditions. Adapt your techniques
-appropriately. 
+Regulations vary with region and municipality. Research and obey all regulations and laws. 
+Confirm information with multiple sources, local experts, and your own experimentation. Be aware
+of your environment and conditions. Adapt your techniques appropriately to each situation. 
 </p>
 </div>
 

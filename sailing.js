@@ -5,7 +5,7 @@ document.write(`
 <span class="md"><a style="text-decoration:none" href="${baseURL}/index.md.html"><div style="position: absolute; left: 0px; top: 0px; width:100%; height: 60px; background: url('${baseURL}/header.jpg'); text-shadow: #2EB3AA 0px 0px 6px; background-size: cover; background-repeat: repeat no-repeat"></div></a></span>
 <span class="md"><a style="text-decoration:none" href="${baseURL}/index.md.html"><div style=" filter: drop-shadow(0px 1px 3px #333); position: absolute; top: 0px; height: 60px; background-size: cover; background-repeat: no-repeat repeat; font-size: 40px; padding-top: 13px; color: #FFF"><img style="margin-left: -57px; top: 5px; position: absolute" width=50 height=50 src="${baseURL}/fat-compass-rose.png"><b style="margin-left:-2px">The Sailing Codex</b></div></a></span>
 
-<div style="border-top: solid 1px; padding-top:10px" class="md">
+<div style="border-top: solid 1px; padding-top:10px">
 <table><tr valign=top><td width=300px>
 <img src="${baseURL}/portrait.jpg" width=370px>
 </td><td width=30px> </td><td><i style="font-size:95%">

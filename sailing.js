@@ -6,16 +6,29 @@ document.write(`
 <span class="md"><a style="text-decoration:none" href="${baseURL}/index.md.html"><div style=" filter: drop-shadow(0px 1px 3px #333); position: absolute; top: 0px; height: 60px; background-size: cover; background-repeat: no-repeat repeat; font-size: 40px; padding-top: 13px; color: #FFF"><img style="margin-left: -57px; top: 5px; position: absolute" width=50 height=50 src="${baseURL}/fat-compass-rose.png"><b style="margin-left:-2px">The Sailing Codex</b></div></a></span>
 
 <div style="border-top: solid 1px; padding-top:10px" class="md">
-<table><tr valign=top><td>
+<table><tr valign=top><td width=300px>
 <img src="${baseURL}/portrait.jpg" width=370px>
 </td><td width=30px> </td><td><i style="font-size:95%">
-This article is part of <a href="https://casual-effects.com">Morgan</a>'s <a href="${baseURL}/index.md.html">Sailing Codex</a> set of notes.
+This article is part of Morgan's <a href="${baseURL}/index.md.html">Sailing Codex</a> collection of notes.
 <br>
-<br>&copy; 2022-2023 Morgan McGuire.
+<br>&copy; 2022-2023 <a href="https://casual-effects.com">Morgan McGuire</a>.
 The work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>,
 excepting portions credited to other sources. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
 </i>
 </td></tr></table>
+<p style="font-size: 60%; line-height: 110%">
+<b>DISCLAIMER</b>. The contents of these articles are presented as informaton only, and this creator makes
+no claims, promises, or guarantees about the accuracy, completeness, adequacy, or
+applicability of the procedures, instructions, and opinions herein. The creator
+of this content expressly disclaims liability for errors and omissions that any readers
+might declare to exist in the information presented. No liability exists or can be
+ascribed to this creator in the event of any accident, loss, or injury that might
+occur as a result of errors or improper application or understanding of
+the information provided. Use at your own risk.
+Confirm everything with other sources, local experts, and your own experimentation. Be aware
+of your environment and conditions. Adapt your techniques
+appropriately. 
+</p>
 </div>
 
 <link rel="icon" sizes="32x32" type="image/x-icon" href="${baseURL}/compass-rose-32x32.ico">

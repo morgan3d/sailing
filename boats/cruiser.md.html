@@ -148,10 +148,13 @@ First Year
   refinement.
 
 LOA
-: Length overall. This affects maneuverability, maintenance cost,
-  and moorage cost. In practice, the cost of ownership is nonlinear
-  in the overall length. The overall length may include bowsprits,
-  rear arches, and davits.
+: Length overall, which may include bowsprits, rear arches, and
+  davits. This affects maneuverability, maintenance cost, and moorage
+  cost. The cost of ownership is nonlinear in the overall length. A
+  40' boat may cost 1.5x as much as a 36' for initial price, moorage
+  fees, and ongoing maintenance--but may also have surprisingly more
+  interior volume. Length is seductive, but the classic wisdom is "buy
+  the smalles boat that you can afford."
 
 LWL
 : Length of the waterline, which affects hull speed and performance.
@@ -161,7 +164,7 @@ Beam
   stability, and maneuverability in a marina.
 
 SA/D ("Sail Area / Displacement")
-: SA/D = (SA in ft²) ÷ ((Displacement in lbs) / 64) ^ 0.666
+: $\mbox{"SA/D"} = \dfrac{\mbox{sail area} ~ [\mbox{ft}^2]}{\left(\frac{1}{64} \mbox{displacement}~[\mbox{lbs}]\right)^{2/3}}$
 
   Higher is generally better, but a high performance boat
   may be harder to handle in foul weather.
@@ -181,14 +184,14 @@ SA/D ("Sail Area / Displacement")
   unitless ratio.
 
 Comfort Ratio
-: CR = (Displacement in lbs) ÷ (0.65 x (0.7 (LWL in ft) + 0.3 (LOA in ft)) x (Beam in ft) ^ 1.33)
-: 
+: $\mbox{CR} = \dfrac{\frac{1}{65} \mbox{displacement}~[\mbox{lbs}]}{100 \left(70\%~\mbox{LWL}~[\mbox{ft}^2] + 30\%~\mbox{LOA}~[\mbox{ft}^2]\right) \cdot (\mbox{beam}~[\mbox{ft}^2])^\frac{4}{3}}$
+:
 : Higher is generally better. Note that "comfort" for a boat reflects
 : the motion in waves, not the level of luxury.
-:  
-: The 0.65 in the denominator is converting the denominator from feet
-: to pounds (it should probably have been 64/100, but this is the
-: standard equation).
+: 
+: I believe that the 1/65 in the denominator is converting the displacement from feet
+: to pounds (it should probably have been 1/64 to match CSF, but this
+: is the standard equation).
 : 
 : This ratio was created by Ted Brewer as a measure of motion
 : comfort, initially as something of a joke and then later found to be
@@ -200,18 +203,20 @@ Comfort Ratio
 :  - 30 to 40 = moderate bluewater cruising boat;
 :  - 40 to 50 = heavy bluewater boat;
 :  - Over 50  = extremely heavy bluewater boat.
-  
+:
+: Beware that for cruisers, the displacement listed for the boat is probably significantly
+: lighter than once tanks are full and provisions and gear are loaded aboard. So, the 
+: comfort ratios are generally lower than what is accurate.
 
 Capsize Screening Formula (CSF)
-: CSF = (Beam in ft) / (Disp in cubic ft) ^ 0.333. The displacement in cubic feet can be found by dividing the displacement in pounds by 64.
+: $\mbox{CSF} = \dfrac{\mbox{beam}~[\mbox{ft}]}{\left(\frac{1}{64} \mbox{displacement}~[\mbox{lbs}]\right)^\frac{1}{3}}$
 
-  Lower is better.
-
-  Designed to determine if a boat has blue water capability. The CSF
-  compares beam with displacement since excess beam contributes to
-  capsize and heavy displacement reduces capsize vulnerability. The boat
-  is better suited for ocean passages (vs coastal cruising) if the
-  result of the calculation is 2.0 or less.
+  Designed to determine if a boat has blue water capability, where
+  lower is better. The CSF compares beam with displacement since
+  excess beam contributes to capsize and heavy displacement reduces
+  capsize vulnerability. The boat is better suited for ocean passages
+  (vs. coastal cruising) if the result of the calculation is less than
+  or equal to 2.0.
 
 Draft
 : How far the boat (mostly, the keel) sticks down under the waterline.

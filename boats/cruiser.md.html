@@ -166,7 +166,7 @@ Beam
 SA/D ("Sail Area / Displacement")
 : $\mbox{"SA/D"} = \dfrac{\mbox{sail area} ~ [\mbox{ft}^2]}{\left(\frac{1}{64} \mbox{displacement}~[\mbox{lbs}]\right)^{2/3}}$
 
-  Higher is generally better, but a high performance boat
+  Higher is generally better, but a higher performance boat
   may be harder to handle in foul weather.
 
   - Below 16 = under powered/motor sailer
@@ -176,12 +176,33 @@ SA/D ("Sail Area / Displacement")
   SA/D numbers have huge error bars because the headsail area is
   variable. Cruisers are often quoted with their working jib instead
   of the genoa they'd use in typical 10 kt wind. That genoa might
-  add another 20% total sail area and thus 20% higher SA/D.
+  add another 20% total sail area and thus 20% higher SA/D. It is also
+  a coarse measure because it does not consider the hull's shape, only
+  its displacement.
   
-  In the equation, division by 64 is a conversion from weight to cubic
-  feet of displacement based on the specific gravity of water. The 2/3
-  power is then converting the cubic feet to square feet, producing a
-  unitless ratio.
+  The ideal information for analyzing true performance is a
+  [polar plot](https://distantshores.ca/boatblog_files/sailing-polar-performance.php)
+  computed for the boat with the appropriate sails for different wind
+  conditions and wind strengths. That shows how fast the boat moves at
+  different points of sail, which can vary radically across boat
+  designs. Also consider the ability and size of the crew, the load, 
+  and the sea conditions under which you expect to sail, which can
+  affect performance as much as the rig and wind. 
+  
+  In the SA/D equation, I believe that the division by 64 is a
+  conversion from weight to cubic feet of displacement based on the
+  specific gravity of water. The 2/3 power is then converting the
+  cubic feet of displacement volume to square feet of effective wetted
+  area, producing a unitless ratio.
+  
+  Note that all monohulls in displacement mode (and laden cruisers
+  don't generally plane) have an effective maximum
+  [hull speed](http://staging4.wavetrain.net/2010/03/26/crunching-numbers-why-longer-is-faster/)
+  in knots through the water of $1.3 \sqrt{LWL~\mbox{feet}}$, which
+  will be 7-8 kts for any mid-sized cruiser. The performance questions
+  are largely how much wind is needed to reach that hull speed (which
+  SA/D helps indicate) and how high the boat can point (which is
+  indicated by a polar or track tacking angle).
 
 Comfort Ratio
 : $\mbox{CR} = \dfrac{\frac{1}{65} \mbox{displacement}~[\mbox{lbs}]}{100 \left(70\%~\mbox{LWL}~[\mbox{ft}^2] + 30\%~\mbox{LOA}~[\mbox{ft}^2]\right) \cdot (\mbox{beam}~[\mbox{ft}^2])^\frac{4}{3}}$
@@ -211,12 +232,32 @@ Comfort Ratio
 Capsize Screening Formula (CSF)
 : $\mbox{CSF} = \dfrac{\mbox{beam}~[\mbox{ft}]}{\left(\frac{1}{64} \mbox{displacement}~[\mbox{lbs}]\right)^\frac{1}{3}}$
 
-  Designed to determine if a boat has blue water capability, where
-  lower is better. The CSF compares beam with displacement since
-  excess beam contributes to capsize and heavy displacement reduces
-  capsize vulnerability. The boat is better suited for ocean passages
-  (vs. coastal cruising) if the result of the calculation is less than
-  or equal to 2.0.
+  Measurement of stability for open ocean (large wave) sailing. The
+  CSF compares beam with displacement since excess beam contributes to
+  capsize and heavy displacement reduces capsize vulnerability. The
+  boat is better suited for ocean passages (vs. coastal cruising) if
+  the result of the calculation is less than or equal to 2.0. Basically,
+  a monohull is more stable with a narrow beam and a heavy keel for
+  both resisting knockdown and recovering from it.
+  
+  There are many factors in stability and this is only a coarse guide.
+  The hull shape, weight aloft and sail shape, and ballast distribution
+  have a large effect. The real information desired is at what heel point
+  the boat capsizes, how well it recovers from a knockdown,
+  and how well it recovers (or whether it can recover at all) from 
+  a roll.
+  
+  The [angle of vanishing stability](http://sailskills.co.uk/Stability/sailskills_stability_stability_explained_AVS.html),
+  the area of negative stability, and
+  overall [GZ curve](https://marine.marsh-design.com/content/understanding-monohull-sailboat-stability-curves)
+  are the real data desired. These are not easily available for all boats and
+  are not as simple to filter on for a first cut. Any Category A rated yacht
+  must have at least a 130 degree AVS and most will have maximum righting moment
+  close to 60 degrees. That means that such a boat  is designed to recover even with the mast well
+  into the water--when appropriately loaded and with hatches and companionway sealed.
+  Modern coastal cruisers with a wide beam and a shallow fin keel are likely less
+  stable than a traditional bluewater boat with a heavy, full keel, narrow beam,
+  and probably less sail aloft. 
 
 Draft
 : How far the boat (mostly, the keel) sticks down under the waterline.

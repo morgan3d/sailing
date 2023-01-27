@@ -205,7 +205,13 @@ stability, and maneuverability in a marina.
 This is referred to as "Sail Area / Displacement", but is not a direct ratio.
 The equation is:
 
-$\mbox{``SA/D''} = \dfrac{\mbox{sail area} ~ [\mbox{ft}^2]}{\left(\mbox{displacement} ~ [\mbox{ft}^3]\right)^{2/3}} = \dfrac{\mbox{sail area} ~ [\mbox{ft}^2]}{\left(\frac{1}{64} \mbox{displacement}~[\mbox{lbs}]\right)^{2/3}} = \dfrac{\mbox{sail area} ~ [\mbox{ft}^2]}{\left(\mbox{displacement} ~ [\mbox{ft}^3]\right)^{2/3}} = \dfrac{\mbox{sail area} ~ [\mbox{m}^2]}{\left(\frac{1}{64} \mbox{displacement}~[\mbox{m}^3]\right)^{2/3}}$
+\begin{eqnarray}
+\nonumber
+\mbox{``SA/D''} &=& \dfrac{\mbox{sail area} ~ [\mbox{ft}^2]}{\left(\mbox{displacement} ~ [\mbox{ft}^3]\right)^{2/3}} = \dfrac{\mbox{sail area} ~ [\operatorname{ft}^2]}{\left(\frac{1}{64} \mbox{displacement}~[\operatorname{lbs}]\right)^{2/3}} \\
+\nonumber
+&=& \dfrac{\mbox{sail area} ~ [\mbox{m}^2]}{\left(\mbox{displacement}~[\mbox{m}^3]\right)^{2/3}}
+\end{eqnarray}
+
 
 Higher is generally better, but a higher performance boat
 may be harder to handle in foul weather.
@@ -245,8 +251,8 @@ producing a unitless ratio.
 Note that all monohulls in displacement mode (and laden cruisers don't
 plane upwind) have an effective maximum
 [hull speed](http://staging4.wavetrain.net/2010/03/26/crunching-numbers-why-longer-is-faster/)
-in knots through the water of $1.3 \sqrt{\operatorname{LWL}~[\mbox{ft}]} = 2.4 \sqrt{\operatorname{LWL}~[\mbox{m}]} = \sqrt{\frac{\operatorname{LWL}~[\operatorname{m}] \times g}{2\pi}}, g = 9.81~\operatorname{m}/\operatorname{s}^2$, which will
-be 7-8 kts for any mid-sized cruiser. The performance questions are
+in knots through the water of $1.3 \sqrt{\operatorname{LWL}~[\mbox{ft}]} = 2.4 \sqrt{\operatorname{LWL}~[\mbox{m}]} = \sqrt{\frac{\operatorname{LWL}~[\operatorname{m}] \times g}{2\pi}}, g = 9.81~\operatorname{m}/\operatorname{s}^2$. 
+This will be 7-8 kts for any mid-sized cruiser. The performance questions are
 largely how much wind is needed to reach that hull speed (which SA/D
 helps indicate) and how high the boat can point (which is indicated by
 a polar or track tacking angle).

@@ -137,18 +137,18 @@ slightly to the sail's side of the boat. The sailboat thus accelerates
 forward (making *headway*), while also slipping sideways slightly
 (making *leeway*).
 
-Two interesting asides before continuing to consider the other forces
+Two interesting asides before continuing on to other forces
 acting on a sailboat.
 First, the exact principle of how the self-reinforcing low
 pressure and lift emerge
-[is complex and not satisfactorily understood](https://www.scientificamerican.com/article/no-one-can-explain-why-planes-stay-in-the-air/),
-although it is modeled nearly perfectly by mathematics and highly optimized 
+[is complex and not satisfactorily understood](https://www.scientificamerican.com/article/no-one-can-explain-why-planes-stay-in-the-air/).
+However, it is modeled nearly perfectly by mathematics and highly optimized 
 through simulation in today's airplane and sailboat designs.
 
 Second, while the keels and rudders are collectively called "*foils*" (most commonly 
 by dinghy sailors), a "foiling" sailboat specifically refers to one such as
-[foiling Moths](https://youtu.be/z2sT8hLoTmQ?t=54) or
-[AC catamaran](https://youtu.be/wbJBk7MlG0k?t=420) that flies over the
+a [foiling Moth](https://youtu.be/z2sT8hLoTmQ?t=54) or
+the [AC catamaran](https://youtu.be/wbJBk7MlG0k?t=420) that flies over the
 water. These boats have "foils" that provide not just horizontal lift but
 also airplane-like vertical lift from additional wings under the
 water. All of these uses of the term "foil" are consistent,
@@ -158,7 +158,40 @@ although confusing because they change with context.
 More Forces
 -------------------------------------------------------------------------
 
+The lift from the sail forward and to leeward and lift from the keel
+(and hull and rudder) to windward, and drag force from the rudder to
+prevent turning, sum to a net force that is forward and slightly to
+leeward when a boat begins moving. These are shown in the top view:
+
 ![](forces.svg width=100%)
+
+There are of course drag forces opposing the velocity of the boat,
+from the hull and foils in the water and from the sail in the air.  If
+nothing changes, these eventually grow with boat speed to counter all
+acceleration to produce a net zero force, at which point the boat
+moves with constant velocity. In practice, the wind and water
+typically create a continually varying environment within which the
+boat is repeatedly accelerating and decelerating.
+
+In the vertical direction, gravity pulls the boat down and is opposed
+by its buoyancy. These cancel and leave the boat floating on the
+surface.
+
+The lift forces act away from the center of mass, so they produce
+torques. Looking at the boat from the bow end, the keel and sail lift
+roll in the same direction. That creates heeling motion as the boat
+accelerates. Opposing the heel is gravity, because the weight distribution
+shifts from centered to windward as the boat heels. 
+
+![Crew on trapeze countering<br>heel while sailing upwind.](trapeze.jpg width=300)
+In a keelboat, substantial weight in the keel and ballast low in the hull
+are acted on by gravitational force to windward that counters the lift
+torque. In a dinghy, the crew shift their weight far to windward by hiking
+(or perhaps with a trapeze) to produce the same effect.
+
+Heeling also reduces the lift itself and becomes self-limiting. This
+is because the sail becomes less efficient as the mast moves away from
+vertical.
 
 https://www.youtube.com/watch?v=Buo4-owgUJI
 
@@ -172,6 +205,8 @@ https://www.youtube.com/watch?v=udoba8xcYzQ
 
 https://www.youtube.com/playlist?list=PL4LYgvLV2Chd2aB3KzMVNKuYr9Dgygjj7
 
+
+
 Drag Propulsion
 ===================================================================
 
@@ -179,10 +214,54 @@ Drag Propulsion
 2. Downwind sailing
 
 
-How a Sailboat Moves
+Hull Speed
 ===================================================================
 
-![](trapeze.jpg width=300)
+A boat in displacement mode has a maximum hull speed relative to the
+water. This occurs primarily because the bow wake has a wave period
+relative to the hull that increases with speed. When the bow wake wave
+exceeds the length of the waterline (LWL), the boat begins moving
+uphill on its own wake. The hull speed is given by:
+
+\begin{eqnarray}
+\operatorname{hull speed} &=& \sqrt{\frac{\operatorname{LWL} \times g}{2\pi}},~~ g = 9.81~\operatorname{m}/\operatorname{s}^2\\
+\operatorname{hull speed}~[\mbox{kts}] &=& 1.3 \sqrt{\operatorname{LWL}~[\mbox{ft}]}\\ 
+ &=& 2.4 \sqrt{\operatorname{LWL}~[\mbox{m}]} 
+\end{eqnarray}
+
+For context, here's the hull speed of boats with varying waterline lengths:
+
+Boat       |   LWL  | Hull Speed
+-----------|-------:|---------:
+Laser      |  3.96 m| 4.8 kts
+Dehler 30  |  8.97 m| 7.2 kts
+ClubSwan 50| 14.00 m| 9.0 kts
+
+Boats with longer waterlines are potentially faster because this
+effect occurs at higher speeds. The vortices created in water and air
+from the boat's passage also create significant drag at high speed and
+affect the maximum speed. 
+
+A boat can exceed its hull speed _over ground_ when sailing with a
+current or pushed from behind by waves.
+
+Hull speed only applies when there is a bow wake. Under the right
+conditions, a boat can *hydroplane* (*plane*) and lift out of the
+water. At that point, it slides along the top of the surface and does
+not create a wake. This requires sufficient speed relative to the
+weight of the boat, as well as a conducive hull shape. Dinghies 
+frequently plane in moderate wind, cruisers seldom plane, and
+racing keelboats will plane under string wind and careful sailing.
+
+Planing has the further advantage that it reduces drag from the hull
+in the water, so it not only allows exceeding hull speed but also
+allows the boat to operate more efficiently.
+
+The very fastest boats eliminate even the relatively low drag of
+planing by foiling. The [IMOCA 60](https://www.imoca.org/en) offshore class, 
+[Nacra 17](https://nacra17.org/) catamaran,
+and a growing set of foiling dinghies and small catamarans leverage
+this technique.
 
 
 A Simple Model

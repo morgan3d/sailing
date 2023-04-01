@@ -139,7 +139,48 @@ let bookshelves = [{
  url:     "https://amzn.to/3ZuU8jU",
  author:  "Nichols",
  image:   "amzn://51YDxZ8YibL"}
-]}
+ ]},
+
+
+                   
+{title:"Fiction",
+ contents:[
+     
+{title:   "Aubrey-Maturin series",
+ url:     "https://amzn.to/3MgO8s2",
+ author:  "O'Brian",
+ image:   "amzn://51hXuO2d4UL"},
+ 
+{title:   "The Privateer",
+ url:     "https://amzn.to/401NAKC",
+ author:  "Tey",
+ image:   "amzn://41-XKCNXzgL"},
+ 
+{title:   "The Riddle of the Sands",
+ url:     "https://amzn.to/3mF3Lip",
+ author:  "Childers",
+ image:   "amzn://41Sr7H2SS9L"},
+ 
+{title:   "Mutiny on the Bounty trilogy",
+ url:     "https://amzn.to/3M3l6fv",
+ author:  "Nordhoff and Hall ",
+ image:   "amzn://51K1a7HzQzL"},
+ 
+{title:   "Treasure Island",
+ url:     "https://amzn.to/3TS341T",
+ author:  "Stephenson",
+ image:   "amzn://51MQprSMHFL"},
+ 
+{title:   "Moby Dick",
+ url:     "https://amzn.to/40F0xdG",
+ author:  "Melville",
+ image:   "amzn://412cEegdD5L"},
+ 
+{title:   "Swallows and Amazons series",
+ url:     "https://amzn.to/3JV8Mv5",
+ author:  "Ransome",
+ image:   "amzn://51fzbOdCdYL"},
+                   ]}
 ];
 
 let src = '';

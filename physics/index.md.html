@@ -90,7 +90,7 @@ then explains these in detail.
   oriented between forwards and sideways.
 3. Sailboats do not move only in the direction they are pointing (the
   *heading*). They also slide sideways in the *lee* direction (with the
-  wind), so the net *course* is both forward and sideways even in the
+  wind), so the net *course* travelled is both forward and sideways even in the
   absence of current.
 4. The keel (and rudder, and hull) also produce lift that cancels most
   of the sideways motion from the sail lift. This lift occurs because
@@ -137,27 +137,31 @@ Airfoils and Hydrofoils
 
 You may be familiar with the depiction of an airplane wing with
 streamlines flowing over it. The *angle of attack* and teardrop shape
-of the wing yield low pressure, fast moving air on the top, incoming
-deflected air on the bottom, and a net *lift* force directed upwards.
+of the wing produce several effects which enable flight.  These are
+low pressure, fast moving air on the top of the wing, incoming
+deflected air on the bottom, and a net *lift* force from these
+that is directed upwards.
 
 ![Side view of an airplane wing and top view of a boat sail.](wing.svg width=750px)
 
 The same airflow phenomena and resulting net lift force occur on a
-boat's sail, which is a _vertical_ *airfoil*.  Moving true wind rather
-than the propeller pulling an airplane forward creates the flow in
-this case, which is why the boat needs no on-board power source.
+boat's sail. In fact, a sail is just a _vertical_ *airfoil* that
+produces horizontal lift forces.  Moving true wind rather than the
+propeller pulling an airplane forward creates the flow in this case,
+which is why a sailboat needs no on-board power source.
 
-Furthermore, the boat's keel, hull, and rudder are vertical *hydrofoils*. They
-experience similar flow of water to that of air over the sail. This
-generates additional lift forces. The water lift forces are on the
-opposide side of the sail's lift and in a direction perpendicular to
+Furthermore, underwater, the boat's keel, hull, and rudder are
+vertical *hydrofoils*. The flow of water over these hydrofoils is
+similar to the flow of air over the sail. This water flow generates
+additional lift forces. The water lift forces are on the opposide side
+of the boat from the sail's lift, and in a direction perpendicular to
 the boat's heading.
 
-![Top view of the flow of water past the keel.](keel-flow.svg width=200px)
+![Left: Top view of the flow of water past the keel. Right: Top view of the flow of air past the sail. The lateral linear components are opposed and limit leeway, but their angular components combine to create heeling roll torque.](keel-flow.svg width=450px)
 
 The combined air and water lift forces yield a net force forward and
 slightly to the sail's side of the boat. The sailboat thus accelerates
-forward (making *headway*), while also slipping sideways slightly
+forward (making *headway*), while also slipping sideways a bit
 (making *leeway*).
 
 Two interesting asides before continuing on to other forces
@@ -175,12 +179,14 @@ refers to one such as a
 [AC catamaran](https://youtu.be/wbJBk7MlG0k?t=420) that flies over the
 water. These boats have "foils" that provide not just horizontal lift
 but also airplane-like vertical lift from additional wings under the
-water. All of these uses of the term "foil" are consistent, although
-confusing because they change with context. As a slight help, the term
-"*appendages*" refers to all protruding aspects of the boat below the
-waterline. It is generally intended to mean keel and rudders, but
-technically includes thrusters, measurement devices, or anything else
-that sticks out.
+water. 
+
+All of these uses of the term "foil" are consistent, although
+confusing because they change with context. The term "*appendages*"
+can be used instead, which refers to all protruding aspects of the
+boat below the waterline. In casual usage means the keel and rudders,
+but technically includes thrusters, measurement devices, or anything
+else that sticks out underwater.
 
 
 Angle of Attack
@@ -273,6 +279,75 @@ Much of the discussion here was based on Bryon Anderson's
 [The Physics of Sailing](https://physicstoday.scitation.org/doi/10.1063/1.2883908)
 article in _Physics Today_, which uses terminology more familiar to
 engineers.
+
+
+Headsails
+-------------------------------------------------------------------
+
+So far I've shown diagrams of a single-sail boat, that is, a
+*cat-rigged* boat, where the mast is fairly close to the bow.
+Except for small dinghies, most sailboats today are *sloop* rigged,
+with the mast further aft and a *headsail* in front of it as well
+as a mainsail behind it.
+
+A headsail generally allows a boat to point slightly higher and
+accelerate faster than a boat that is cat rigged with similar mainsail
+area.
+
+The forces on the headsail are the same as for the mainsail. Headsails
+also produce lift and drag. A *jib* or *genoa* headsail is primarily
+useful upwind. When sailing downwind, they are blanketed by the
+mainsail and do not receive much wind, so may be doused and replaced
+with alternative downwind headsails.
+
+There are two major changes to the physics of sailing upwind when
+using a headsail in addition to the mainsail:
+
+1. The forces on the headsail push the bow away from the wind
+   and the forces on the mainsail push the stern away from the wind.
+   This means that the boat can be steered primarily by adjusting
+   the relative amount of lift and drag on these sails.
+
+2. The airflow off the back of the headsail changes the apparent wind
+   for the mainsail. This means that the main needs a steeper angle of
+   attack than the headsail. That is, the mainsail is trimmed in
+   tighter than the headsail or than it would be in the absence of
+   one.
+
+
+### Weather Helm
+
+It is good idea to adjust both sails so that they are achieving
+maximum lift and the boat is *balanced* with no rudder forces required
+to sail straight. Then, slightly ease the headsail and turn the rudder
+a few degrees to compensate for the intentionally unbalanced forces.
+
+This configuration is called slight *weather helm* or *windward helm*.
+On a boat with a tiller, the tiller is pulled towards the windward
+side of the boat. On a boat with a wheel, the wheel is turned towards
+the leeward side; in either case, the aft end of the rudder is pointed
+to windward.
+
+In this configuration, the main will be overpowered first in a gust.
+This will cause excess force behind the mast and cause the boat to
+round up towards the wind, slowing it down and reducing heel. 
+That is the desired case. 
+
+If the boat were instead balanced, it could be knocked down in a gust.
+If the boat had *leeward helm*, then it would turn away from the wind
+in a gust and accelerate and heel further.
+
+In strong winds, there can be excess weather helm, forcing the boat to
+point towards the wind even outside of gusts. In this case, the
+relative areas as well of trim of the sails must be adjusted. In the
+extreme, a small storm jib and no mainsail at all may be required to
+keep the boat off the wind, as the mast produces a small amount of
+lift on its own.
+
+When racing, it is a common tactic to make course adjustments
+partially by adjusting the balance of the sails. This leverages
+relative lift forces instead of solely the drag from the rudder and
+can help maintain speed, especially when initiating a tack.
 
 
 Drag Propulsion
@@ -476,11 +551,6 @@ air.
 - Curve
 - Point of effort
 
-
-Steering with Sails
----------------------------------------------------------------------
-- Balancing the helm
-- Slight leeward helm
 
 
 Sailing by the Lee

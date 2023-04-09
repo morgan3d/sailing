@@ -165,6 +165,11 @@ let bookshelves = [{
  url:     "https://amzn.to/40V4TgS",
  author:  "Barrett",
  image:   "amzn://41NIkJe4aeL"},
+
+{title: "White-Jacket",
+      url: "https://amzn.to/3nF3YCP",
+      author: "Melville",
+      image: "amzn://51Wq6BfpYPL"},
      
 {title:   "Mutiny on the Bounty trilogy",
  url:     "https://amzn.to/3M3l6fv",

@@ -138,7 +138,17 @@ let bookshelves = [{
 {title:   "A Voyage for Madmen",
  url:     "https://amzn.to/3ZuU8jU",
  author:  "Nichols",
- image:   "amzn://51YDxZ8YibL"}
+ image:   "amzn://51YDxZ8YibL"},
+
+{title: "Scapa Ferry",
+ url: "https://amzn.to/3ZWyGEE",
+ author: "Antony Bridges",
+ image: "https://m.media-amazon.com/images/I/51MQL+p6pDL._SX306_BO1,204,203,200_.jpg"},
+
+{title: "Once is Enough",
+ url: "https://amzn.to/3zMdrej",
+ author: "Miles Smeeton",
+ image: "amzn://51tkwDv66ZL"}
  ]},
 
 

@@ -1,15 +1,16 @@
           <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
                          **Motoring a Sailboat**
-                            Updated 2023-03-25
+                            Updated 2023-04-24
 
 Keelboats often have motors to aid in docking or making way in poor
-sailing conditions. This article focuses on maneuvering 30' and larger
-keelboats with inboard engines. Engine maintenance and mooring
-techniques are covered in separate articles.
+sailing conditions. This article focuses on maneuvering keelboats with
+_inboard_ engines. Motoring is also called auxilliary propulsion for
+a sailboat, since the primary means of propulsion is of course sailing.
 
-Also not covered in this article are techniques specific to keelboats
-under 30', which usually have outboard motors. These boats operate
-much like slightly awkward motor launches under power and the
+Engine maintenance and mooring techniques are covered in separate
+articles instead of this one. Also not covered in this article are
+techniques specific smaller boats with _outboard_ motors. These boats
+operate much like slightly awkward motor launches under power and the
 techniques described here are not necessary. That is, except for
 having to steer with both the engine and tiller, smaller boats are
 relatively straightforward to handle under power (once your engine
@@ -38,23 +39,6 @@ moving backwards and rotating to port. In fact, this is part of the
 recommended *back and fill* maneuver for changing direction in a
 fairway.
 
-
-Systems
-=========================================================================
-
-Shaft Drive
--------------------------------------------------------------------------
-
-
-Saildrive
--------------------------------------------------------------------------
-
-
-Thrusters
--------------------------------------------------------------------------
-
-- Propeller
-- Jet
 
 
 Covering Distance
@@ -419,6 +403,151 @@ grounded at some point. How often grounding occurs depends on where
 and how you sail. My own experiences have been largely with silted-in
 channels at low tide and isolated submerged rocks in unfamiliar
 waters.
+
+Systems
+=========================================================================
+
+Diesel Engine
+-------------------------------------------------------------------------
+
+Most 30' and larger keelboats have an internal diesel engine or diesel
+generator for either directly driving, or powering via batteries, the
+auxilliary propulsion mechanism.
+
+A diesel engine requires a functioning electrical system and power to
+start or stop, but not to continue operating. So, one turns on the
+engine's electrical system first, then starts the engine, and then
+leaves the power on until after the engine is later stopped. In an
+emergency, a diesel engine can also be stopped by manually depriving
+it of fuel. A diesel engine will not start if it is below about 8
+degrees C, so electric *glow plugs* can be used to heat it for a few
+seconds when the ambient temperature is cold.
+
+Marine diesel engines use seawater for cooling and will be damaged and
+stopped if the cooling system fails. When turning on a marine diesel
+engine, immediately listen for the cooling water emerging from the boat.
+If it is not, stop the engine and check the filters, stopcocks, hoses,
+and water pump/impeller.
+
+Unlike other fuels, diesel is not explosive at normal temperature and
+pressure. For example, a match dropped into a bucket of diesel will be
+extinuished instead of lighting. Marine diesel (MDO) contains more 
+heavy fuel oil than automobile diesel, and is colored red to make
+spills and leaks visible. Diesel will float on top of both fresh and
+salt water. This includes in the fuel tank--water contamination will
+sink to the bottom of the tank.
+
+*Diesel bug* is contamination by bacteria and algae within the fuel
+tank.  It is exacerbated by the use of bio-diesel (which is pervasive
+today to reduce fossil fuel production) and water in the tank.  It can
+be mitigated by keeping the tank clean and nearly full, reducing the
+volume available for oxygen and water vapor. Contaminated fuel can be
+cleaned by filtering.
+
+Engines have a particular speed (measured in revolutions per minute,
+*RPM*), at which they are most efficient. This is typically around
+2000-2500 RPM for marine diesels. Engines become radically less
+efficient above their target speed. On a boat, increasing the RPMs can
+consume fuel 10x faster while gaining relatively little speed,
+especially for a non-planing sailboat which is hull-speed limited.
+This typically corresponds to motoring at 5-7 kts depending on the
+engine and boat to stay in the efficient band.
+
+
+Shaft Drive
+-------------------------------------------------------------------------
+
+The traditional drive system for a boat is a propeller *shaft*
+directly in line with the engine and run out through the hull to a 
+*propeller*. The *stuffing box* minimizes the water ingress where
+the shaft penetrates the hull, but will *weep* small amounts of water
+in normal operation.
+
+The design of a shaft drive is typically constrained such that the
+shaft is at a slight downward angle as it exits the hull. This means
+that the propeller is not pointing straight backwards but instead
+slightly downwards as well. This angle gives rise to *prop walk*,
+where varying force exerted by the blades on the bottom and top
+creates a lateral force on the stern of the boat. Prop walk is
+advantageous for accelerating turns when in a marina, but reduces the
+efficiency of motoring straight for long distances.
+
+
+Mechanical Saildrive
+-------------------------------------------------------------------------
+
+A saildrive is like the shaft and propeller of an outboard engine, but
+mounted to the inboard engine. It connects to the back of the engine and
+projects downward from the bottom of the hull.
+
+Saildrives have several advantages over shaft drives, which has led
+them to nearly universal application in new boats. Only a handful of
+manufacturers use shaft drives today (such as Rustler and Island
+Packet).
+
+Saildrives create less vibration and noise underway. They are more
+efficient than shaft drives when traveling straight for long
+distances. They consume less internal volume, creating more room
+for storage and accomodation. The seals do not weep and are less likely
+to leak than a stuffing box, keeping the bilge drier.
+
+There are also drawbacks of saildrives compared to shaft drives.  They
+require professional maintenance every 5-10 years. The enclosure is
+made from aluminum, and requires sacrificial anodes and frequent
+monitoring to avoid corrosion. The relatively minimal prop walk in
+reverse makes turning more difficult by precluding the back-and-fill
+maneuver, perhaps requiring a bow thruster to compensate on longer
+boats. The through-hull hole for a saildrive is very large compared to
+a propellor shaft hole. It is sealed by a major gasket and has a
+separate leak alarm.
+
+
+Electric Saildrive
+-------------------------------------------------------------------------
+
+Electric saildrives, such as OceanVolt, are not mechanically coupled
+to the engine. They instead use electric motors to power a saildrive.
+
+This fully unconstrains the location of the generator, or allows
+removing the generator entirely if an alternative source of power such
+as solar and large batteries is available. While sailing, the
+propeller can also be used for regeneration, creating a small amount
+of drag and recharging the batteries.
+
+Electric saildrives are nearly silent and allow operation with the
+generator off. They provide power instantly and do not require the
+careful spin up time of a mechanical drive to reach high amounts of
+thrust. They also allow the generator to be run at its most efficient
+RPMs independent of the speed of the propeller.
+
+The primary downside of electric saildrives is that it is too early in
+the product cycle to use them in many cases. They effectively require
+the efficiency of LiFePO4 batteries, which creates a complex and
+relatively new system compared to the bulletproof and easy to repair
+system of a diesel engine. 
+
+On monohulls, it is difficult to achieve sufficient power for
+recharging without using diesel because there isn't enough surface
+area for sufficient solar. This means that monohulls with electric
+saildrives are still using diesel generators (reducing many of the
+electric advantages), required to recharge by shore power frequently,
+or dominated by power conservation concerns when operated.
+
+
+Propellers
+-------------------------------------------------------------------------
+
+- Folding
+- Regenerating
+- Number of blades
+- Toroidal
+
+Thrusters
+-------------------------------------------------------------------------
+
+- Propeller
+- Jet
+
 
 
 <script src="../sailing.js"> </script>

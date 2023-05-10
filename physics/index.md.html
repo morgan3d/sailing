@@ -1,6 +1,6 @@
               <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
                       **Sailboat Physics**
-                  Published 2023-03-15; Updated 2023-04-25
+                  Published 2023-03-15; Updated 2023-05-10
 
 
 ![](https://www.youtube.com/watch?v=YAeSFwzRETY width=580)
@@ -552,6 +552,15 @@ other boats.
 Shaping the Sails
 ==========================================================================
 
+## Mainsail
+
+A triangular mainsail has control lines to adjust each edge
+of the sail. These are essentially the same regardless of the size
+of the boat, although certain controls (such as the cunningham or
+leech line) may be absent on specific boats.
+
+The corners and edges of the mainsail are:
+
  **********************************
  *                Head
  *                  *
@@ -576,28 +585,103 @@ Shaping the Sails
  *             KEEL
  **********************************
 
-Main:
+The control lines for the mainsail are:
 
-  - Orientation: Sheet + Traveler
-  - Luff: Halyard / Cunningham
-  - Twist: Vang
-  - Leech: Vang + Sheet (when close hauled) --> Leech line
-  - Foot: Outhaul
-  
-Jib/Genoa:
+  - Angle of attack: 
+    - Mainsheet
+    - Traveler. Absent or not controllable on some boats
+  - Luff: 
+     - Cunningham. Absent on roller furling mainsails
+     - Halyard. Not available for adjustment with in-mast furling
+  - Leech (primarily for top of sail twist): 
+     - Vang
+     - Mainsheet when close hauled
+     - Leech line as a secondary adjustment. Not available on most small boats
+  - Foot:
+     - Outhaul. Not available on boom furlers
 
-  - Orientation: Sheet
-  - Luff: Halyard
-  - Twist: Jib leads
-  - Leech: Sheet --> Leech line
-  - Foot: Sheet
+The *draft* is the deepest part of the sail's curve and the center of
+effort. For best performance in moderate wind, the mainsail draft
+should be slightly forward of the vertical center of the sail. That
+both makes the sail efficient in shape and keeps the helm balanced.
 
-Battens can also help preserve curve under very heavy and very light
-air.
+Battens help preserve curve and draft shape under both very heavy and
+very light air.
 
-- Curve
-- Point of effort
+### Luff 
 
+Increasing luff tension moves the draft forward and decreasing it moves
+the luff aft.
+
+Increasing mast bend both flattens the mainsail and moves the draft
+aft. This is done via backstay tension, or mainsheet and vang tension
+in an unstayed dinghy. This is why increasing cunningham tension upwind
+helps a dinghy point higher: it counters the mast bend pushing the 
+draft aft and allows the boat to be balanced, reducing weather helm.
+
+### Foot
+
+Increasing outhaul tension flattens the sail, reducing both lift and drag.
+A flatter sail is better at high apparent wind speed, where drag
+is a concern and excess lift leads to heel. A deeper sail is better
+at low wind speeds, where more lift is required to accelerate. Three important
+notes about this. First, drag increases with the cube of wind speed, so
+it is a dominant concern when moving fast but insignificant when moving
+slowly. Second, the _apparent_ wind speed is what matters. So, in the
+presence of a constant true wind, a boat benefits from flattening its
+sail as its own upwind speed increases. Third, this applies to a sail
+operating as an airfoil in lift mode, upwind. When in drag propulsion
+running downwind (or even in a broad reach, when the apparent wind is low),
+a very loose outhaul and deep sail can be advantageous.
+
+### Leech
+
+Leech tension, primarily controlled through the vang, adjusts the
+angle of release of the sail and also flattens it. 
+The leech tension affects a both the differential
+airfoil shape at the bottom versus the top of the sail and
+the angle of the trailing edge of that airfoil, which acts in a similar manner to an
+airplane's flaps. This is visible as a twist of the sail. The amount of twist
+desired varies with apparent wind speed:
+ 
+ - Light: low leech tension to get a deeper sail
+ - Moderate: moderate leech tension, small twist
+ - Strong: high leech tension, almost no twist
+ - Overpowered: low leech tension, high twist to spill air and bring the center of effort down and reduce lift, to reduce heeling
+
+
+## Headsail
+
+A triangular headsail such as a 
+jib, genoa, or code zero has the same three corners and edges.
+The corners are the head (top, attached to the halyard),
+tack (front, attached to the bow), and clew (back, attached to the sheets).
+The edges are the luff (leading edge between head and tack),
+leech (trailing edge between head and clew), and foot (bottom edge
+between tack and clew). The control lines are:
+
+  - Angle of attack:
+    - Sheet, which may be on a sideways traveller for a self-tacker
+  - Luff:
+    - Halyard. Not available for adjustment on a furling headsail
+  - Leech: 
+     - Sheet 
+     - Leech line, not available on all boats
+     - Jib leads, on fore-aft travellers or rings. Not available on
+       all boats
+  - Foot:
+     - Sheet
+
+Compared to the mainsail, there are many fewer controls on most
+headsails. On many boats, the only control is the sheet, which
+prevents independent adjustment of the edges. In that case the
+headsail's role may be less about power and more about balancing the
+overall center of effort of the sailplan to manage weather helm, and
+changing the aparent wind direction across the main.
+
+The jib leads control the twist of the sail, adjusting leech tension
+and changing the angle of departure separately for the top and
+bottom of the sail.
 
 
 Sailing by the Lee

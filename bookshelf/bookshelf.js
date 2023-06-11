@@ -24,6 +24,11 @@ let bookshelves = [{
  url:    "https://amzn.to/3ZTHpbc", 
  author: "Pardey and Pardey 2008",
  image:  "amzn://51Xhjyc-TpL"},
+
+{title:  'Expert Sailing Skills',
+ url:    'https://amzn.to/43WqOFV', 
+ author: 'Cunliffe 2012',
+ image:  'amzn://51lrXmBICmL'},    
  
 {title:  'Stress-Free Sailing',
  url:    'https://amzn.to/426xzVc', 

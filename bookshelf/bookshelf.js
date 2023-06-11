@@ -211,7 +211,7 @@ for (shelf of bookshelves) {
     for (let b = 0; b < shelf.contents.length; ++b) {
        let {title, author, image, url} = shelf.contents[b];
        
-       image = image.replace(/amzn:\/\/(.*)/, "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/$1._SX260_.jpg");
+       image = image.replace(/amzn:\/\/(.*)/, "https://m.media-amazon.com/images/I/$1._SX260_.jpg");
        
        imgSrc += `<td width=33%><center><a href="${url}">![](${image} class="book")</a></center></td>`;
        txtSrc += `<td>[_${title}_](${url})<br>${author}</td>`;

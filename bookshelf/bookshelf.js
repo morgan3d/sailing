@@ -45,6 +45,11 @@ let bookshelves = [{
  image:  'amzn://510qvMetq9L',
  url:    'https://amzn.to/3LfE16j'},
 
+{title:  "The Complete Rigger's Apprentice",
+ url:    "https://amzn.to/3p0IL7l",
+ author: "Toss 2016",
+ image:  "amzn://51g+We2verL"},
+
 {title:  "Get Rid of Boat Odors",
  url:    "https://amzn.to/3T7qFuR",
  author: "Hall 2016",
@@ -153,7 +158,7 @@ let bookshelves = [{
 
 
                    
-{title:"Fiction",
+{title:"Historical Fiction",
  contents:[
      
 {title:   "Aubrey-Maturin series",
@@ -200,8 +205,18 @@ let bookshelves = [{
  url:     "https://amzn.to/3JV8Mv5",
  author:  "Ransome",
  image:   "amzn://51fzbOdCdYL"},
-                   ]}
-];
+
+{title:   "Frenchman's Creek",
+ url:     "https://www.amazon.com/Frenchmans-Creek-Daphne-du-Maurier-ebook/dp/B00GW4JQY4",
+ author:  "du Maurier",
+ image:   "amzn://51lc7yrkxeL"},
+
+{title:   "Hornblower saga",
+ url:     "https://amzn.to/3P6Xl7T",
+ author:  "Forester",
+ image:   "amzn://51gaKLrwAFL"},
+
+ ]}];
 
 let src = '';
 for (shelf of bookshelves) {

@@ -15,13 +15,14 @@
 	.st9{fill:none;stroke:#00AEEF;stroke-width:2;stroke-miterlimit:7.0169;}
 	.st10{fill:none;stroke:#00AEEF;stroke-width:2;stroke-miterlimit:7.0169;stroke-dasharray:11.7791,11.7791;}
 	.st11{fill:#00AEEF;stroke:#010101;stroke-width:2;stroke-miterlimit:7.0169;}
-	.st12{fill:none;stroke:#F26522;stroke-miterlimit:7.0169;}
+	.st12{fill:#FFFFFF;stroke:#F26522;stroke-miterlimit:7.0169;}
 	.st13{fill:#F26522;}
 	.st14{font-family:'MyriadPro-Regular';}
-	.st15{fill:none;stroke:#00AEEF;stroke-miterlimit:7.0169;}
-	.st16{fill:#00AEEF;}
-	.st17{fill:none;stroke:#E6E7E8;stroke-width:2;stroke-miterlimit:7.0169;}
-	.st18{fill:#D1D3D4;}
+	.st15{fill:none;stroke:#F26522;stroke-miterlimit:7.0169;}
+	.st16{fill:none;stroke:#00AEEF;stroke-miterlimit:7.0169;}
+	.st17{fill:#00AEEF;}
+	.st18{fill:none;stroke:#E6E7E8;stroke-width:2;stroke-miterlimit:7.0169;}
+	.st19{fill:#D1D3D4;}
 </style>
 <g>
 	<circle class="st0" cx="241" cy="80.7" r="216.4"/>
@@ -63,18 +64,18 @@
 <path class="st12" d="M25.2,221.3c5.1,0,15.4,0,15.4,0l23.5,36.9L61.3,221c0,0,73.4,0.3,106.5,0.3c0.7,0,4.2-0.1,7-2.3
 	c1.8-1.4,2.9-3.4,2.9-5.6v-9.2c0-4.4-4.4-7.9-9.9-7.9H25.2c-5.5,0-9.9,3.6-9.9,7.9v9.2C15.2,217.7,19.7,221.3,25.2,221.3z"/>
 <text transform="matrix(1 0 0 1 21.0898 214.2738)" class="st13 st14 st3">“I need mark-room!”</text>
-<path class="st12" d="M95.1,180.2"/>
-<path class="st15" d="M143,253.5c5.1,0,15.3,0,15.3,0l-5.8,20l26.3-20.4c0,0,72.7,0.3,105.5,0.3c0.7,0,4.1-0.1,7-2.3
+<path class="st15" d="M95.1,180.2"/>
+<path class="st16" d="M143,253.5c5.1,0,15.3,0,15.3,0l-5.8,20l26.3-20.4c0,0,72.7,0.3,105.5,0.3c0.7,0,4.1-0.1,7-2.3
 	c1.8-1.4,2.9-3.4,2.9-5.6v-9.2c0-4.4-4.4-7.9-9.8-7.9H143c-5.4,0-9.8,3.6-9.8,7.9v9.2C133.2,250,137.6,253.5,143,253.5z"/>
-<text transform="matrix(1 0 0 1 146.7653 246.6783)" class="st16 st14 st3">“OK, giving room.”</text>
-<path id="path1317_00000001626342459417705030000014968348285088923021_" class="st17" d="M60.4,96.2c22-1.5,30.5-5.1,31.3-5.9
+<text transform="matrix(1 0 0 1 146.7653 246.6783)" class="st17 st14 st3">“OK, giving room.”</text>
+<path id="path1317_00000001626342459417705030000014968348285088923021_" class="st18" d="M60.4,96.2c22-1.5,30.5-5.1,31.3-5.9
 	c1.5-1.4,1.6-6.2,1.5-8.6c-0.2-2.4-0.9-7.2-2.5-8.4c-0.9-0.7-9.7-3.4-31.8-2.4c-16.5,0.7-27.4,8.2-32.1,12.2
 	c-1.5,1.3-1.3,3.5,0.3,4.6C32.3,91.1,44,97.3,60.4,96.2z"/>
-<path id="path1317_00000149382868289508930510000004295788303968221356_" class="st17" d="M127.1,94.4c22.1-0.2,30.7-3.4,31.6-4.1
+<path id="path1317_00000149382868289508930510000004295788303968221356_" class="st18" d="M127.1,94.4c22.1-0.2,30.7-3.4,31.6-4.1
 	c1.5-1.4,2-6.1,2-8.6c0-2.4-0.4-7.2-2-8.6c-0.8-0.7-9.5-3.9-31.6-4.2c-16.5-0.2-27.8,6.7-32.7,10.4c-1.5,1.2-1.5,3.4,0,4.6
 	C99.2,87.8,110.6,94.6,127.1,94.4z"/>
-<path id="path1317_00000152977134369279196520000004090396356190554002_" class="st17" d="M194.5,94.4c22.1-0.2,30.7-3.4,31.6-4.1
+<path id="path1317_00000152977134369279196520000004090396356190554002_" class="st18" d="M194.5,94.4c22.1-0.2,30.7-3.4,31.6-4.1
 	c1.5-1.4,2-6.1,2-8.6c0-2.4-0.4-7.2-2-8.6c-0.8-0.7-9.5-3.9-31.6-4.2c-16.5-0.2-27.8,6.7-32.7,10.4c-1.5,1.2-1.5,3.4,0,4.6
 	C166.7,87.8,178,94.6,194.5,94.4z"/>
-<text transform="matrix(1 0 0 1 69.7019 114.172)" class="st18 st14 st3">3 Hull Lengths</text>
+<text transform="matrix(1 0 0 1 69.7019 114.172)" class="st19 st14 st3">3 Hull Lengths</text>
 </svg>

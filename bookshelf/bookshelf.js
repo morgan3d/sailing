@@ -29,7 +29,13 @@ let bookshelves = [{
  url:    'https://amzn.to/43WqOFV', 
  author: 'Cunliffe 2012',
  image:  'amzn://51lrXmBICmL'},    
- 
+
+{title:  'Getting Started in Sailboat Racing',
+ url: 'https://amzn.to/3PB1ktB',
+ author: 'Cort and Stearns 2013',
+ image: 'amzn://51t6Ry+uPLL'
+},
+    
 {title:  'Stress-Free Sailing',
  url:    'https://amzn.to/426xzVc', 
  author: 'Wells 2021',

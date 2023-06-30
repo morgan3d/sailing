@@ -132,6 +132,39 @@ RS Aero 9| 1010 |  +99 s     | 18:21
 29er     |  922 |  +195 s    | 16:45
 RS 800   |  799 |  +329 s    | 14:30
 
+Pursuit Offsets
+----------------------------------------------------------------
+In a pursuit race, the start times for each class are offset
+so that all boats should finish at the same time. This means
+that the rankings are based finish order and no correction
+is needed after the race.
+
+Let $PN_Z$ be the Portsmouth number of the slowest, "scratch" boat
+class and $ET_Z$ be the anticipated elapsed time for
+a boat in that class on the course. The offset start time
+for another class $A$ is:
+
+\begin{equation}
+\Delta t_A = ET_Z \times \left(\dfrac{PN_Z}{PN_A} - 1\right)
+\end{equation}
+
+In a race that an RS Zest is expected to start at noon and
+complete in one hour, the start times for the other boats are:
+
+(1260/1111 - 1) * 60 * 60
+
+Boat     | PN   | Adjustment | Start Time
+---------|-----:|-----------:|----------:
+RS Zest  | 1260 |  +0 s      | 12:00:00
+I420     | 1111 |  +483 s    | 12:08:03
+Laser 7  | 1101 |  +520 s    | 12:08:40
+Wayfarer | 1101 |  +520 s    | 12:08:40
+Laser Vago|1064 |  +663 s    | 12:10:33
+RS Aero 9| 1010 |  +891 s    | 12:14:51
+29er     |  922 |  +1320 s   | 12:22:00
+RS 800   |  799 |  +2077 s   | 12:34:37
+
+
 <style>
 .md table.table th {
   font-size: 75%

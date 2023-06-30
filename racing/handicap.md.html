@@ -1,0 +1,150 @@
+              <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
+                  **Sailboat Racing Handicaps**
+                 Published 2023-06-29; Updated 2023-06-30
+
+The two autocalibrating handicap systems for mixed class racing are
+the
+[Portsmouth Yardstick](https://www.rya.org.uk/racing/technical/handicap-systems/portsmouth-yardstick)
+for dinghies, and
+[Performance Handicap Racing Fleet](https://www.ussailing.org/competition/offshore/phrf/)
+(PHRF) for larger keelboats. Both of these are based on observed
+previous performance of boats and updated frequently. This article
+gives the equations needed for scoring races with them.
+
+In each system, the Elapsed Time (_ET_) of a boat is the measured time
+at which they finish relative to their start, and the Corrected Time
+(_CT_) is the computed value based on their handicap that is used for
+determining ranking.
+
+The [Offshore Racing Congress Rule](https://orc.org/organization)
+(ORCR) is a measurement based rule for fairly large sailboats and
+longer offshore races. I do not discuss it here.
+
+Previous handicap systems such as IOR, IMS, and US DPN are now obsolete.
+
+
+PHRF
+========================================================================
+
+The PHRF handicap has units of seconds per nautical mile [s / NM]. A
+fast boat has a low or negative rating. A slow boat has a high,
+positive rating.
+
+The difference between two boats' PHRF ratings is the expected
+difference in their sailing times per mile.
+
+For reference, here are some PHRFs for common boats. Note that these
+values are adjusted for different styles of racing, rigs, crew weight,
+etc. on specific boats.
+
+Boat            | PHRF
+----------------|-------------:
+Farr 36         | 0
+J/111           | 39
+Dehler 30       | 45
+C+C 34          | 87
+Jeanneau 36 Sun Fast | 93
+Hunter 40       | 96
+X-99            | 114
+Jeanneau SO 349 | 120
+Morgan 38       | 138
+Beneteau 343    | 147
+Swan 36         | 150
+Catalina 34     | 150
+Nonsuch 33      | 168
+Island Packet 38 | 168
+O'Day 31        | 171
+J/22            | 177
+Alberg 30       | 228
+Rhodes 19       | 234
+Catalina 22     | 276
+
+Time-on-Distance (TOD)
+------------------------------------------------------------------------
+
+\begin{equation}
+CT = ET - \dfrac{PHRF}{L}
+\end{equation}
+
+Where $L$ is the length of the course in nautical miles. 
+
+
+Time-on-Time (TOT)
+------------------------------------------------------------------------
+
+\begin{equation}
+CT = ET \times \dfrac{k}{k - M + PHRF}
+\end{equation}
+
+Where $M$ is the mean (average) $PHRF$ over all boats in the fleet and $k$
+is a regionally varying constant that is usually between 550 and 650.
+
+
+Portsmouth
+========================================================================
+
+The Portsmouth Yardstick rating $PY$ is a unitless quantity. It
+is adjusted regionally each year based on collected performance
+across clubs, and then per club in some cases.
+See [single-handed](../dinghies/dinghy1.md.html) and [double-handed](../dinghies/dinghy2.md.html)
+dinghy handicap tables in the respective articles.
+
+Popular midrange performance dinghies including 420, ILCA 7 (Laser),
+Wayfarer, GP14, Hadron H2, RS200, RS Aero 7, and the Europe are all
+relatively close to each other around $PY = 1100$. Lower $PY$ numbers
+are faster boats, higher numbers are slower boats.
+
+Corrected Time
+---------------------------------------------------------------
+
+\begin{equation}
+CT = ET \times \dfrac{1000}{PY}
+\end{equation}
+
+
+Lead Times
+------------------------------------------------------------------
+How much time do you need to beat another boat by to rank higher
+than it?
+
+A faster boat A ranks higher in the race than a slower boat B
+if B finishes more than
+
+\begin{equation}
+\Delta t > ET_A \left(\dfrac{PY_B}{PY_A} - 1\right)
+\end{equation}
+
+seconds later. Conversely, boat B ranks higher if it finishes
+within $\Delta t$ seconds later.
+
+For example, in a race that a Laser 7 finishes in 
+20 minutes, these boats need to finish by the following
+times to tie it:
+
+Boat     | PY   | Adjustment | _ET_ To Tie
+---------|-----:|-----------:|----------:
+RS Zest  | 1260 |  -173 s    | 22:53
+I420     | 1111 |  -11 s     | 20:11
+Laser 7  | 1101 |  +0 s      | 20:00
+Wayfarer | 1101 |  +0 s      | 20:00
+Laser Vago|1064 |  +40 s     | 20:43
+RS Aero 9| 1010 |  +99 s     | 18:21
+29er     |  922 |  +195 s    | 16:45
+RS 800   |  799 |  +329 s    | 14:30
+
+<style>
+.md table.table th {
+  font-size: 75%
+}
+
+.md table.table td {
+  font-size: 65%;
+  white-space: nowrap;
+  font-family: Arial;
+}
+.md table.table tr {
+vertical-align: top
+}
+</style>
+
+<script src="../sailing.js"> </script>

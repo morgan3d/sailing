@@ -2,6 +2,8 @@
                   **Sailboat Racing Handicaps**
                  Published 2023-06-29; Updated 2023-06-30
 
+<script src="handicap.js"></script>
+
 The two autocalibrating handicap systems for mixed class racing are
 the
 [Portsmouth Yardstick](https://www.rya.org.uk/racing/technical/handicap-systems/portsmouth-yardstick)
@@ -14,7 +16,7 @@ gives the equations needed for scoring races with them.
 In each system, the Elapsed Time (_ET_) of a boat is the measured time
 at which they finish relative to their start, and the Corrected Time
 (_CT_) is the computed value based on their handicap that is used for
-determining ranking.
+determining ranking. 
 
 The [Offshore Racing Congress Rule](https://orc.org/organization)
 (ORCR) is a measurement based rule for fairly large sailboats and
@@ -32,6 +34,10 @@ positive rating.
 
 The difference between two boats' PHRF ratings is the expected
 difference in their sailing times per mile.
+
+PHRFs happen to be calibrated such that almost all boats have a lower
+corrected time _CT_ than elapsed time _ET_. That is, PHRF makes most
+boats virtually faster and is an advantage-based system.
 
 For reference, here are some PHRFs for common boats. Note that these
 values are adjusted for different styles of racing, rigs, crew weight,
@@ -102,6 +108,10 @@ cases.  See [single-handed](../dinghies/dinghy1.md.html) and
 [double-handed](../dinghies/dinghy2.md.html) dinghy handicap tables in
 the respective articles.
 
+PNs happen to be calibrated such that almost all boats have a higher
+corrected time _CT_ than elapsed time _ET_. That is, PN makes most
+boats virtually slower and is a disadvantage-based system.
+
 Popular midrange performance dinghies including 420, ILCA 7 (Laser),
 Wayfarer, GP14, Hadron H2, RS200, RS Aero 7, and the Europe are all
 relatively close to each other around $PN = 1100$. Lower $PN$ numbers
@@ -124,11 +134,11 @@ A faster boat A ranks higher in the race than a slower boat B
 if B finishes more than
 
 \begin{equation}
-\Delta t > ET_A \left(\dfrac{PN_B}{PN_A} - 1\right)
+\Delta T > ET_A \left(\dfrac{PN_B}{PN_A} - 1\right)
 \end{equation}
 
 seconds later. Conversely, boat B ranks higher if it finishes
-within $\Delta t$ seconds later.
+less than $\Delta T$ seconds later.
 
 For example, in a race that a Laser 7 finishes in 
 $ET$ = 20 minutes, these boats need to finish by the following
@@ -145,6 +155,7 @@ RS Aero 9| 1010 |  +99 s     | 18:21
 29er     |  922 |  +195 s    | 16:45
 RS 800   |  799 |  +329 s    | 14:30
 
+
 Pursuit Offsets
 ----------------------------------------------------------------
 In a pursuit race, the start times for each class are offset
@@ -155,26 +166,90 @@ is needed after the race.
 Let $PN_Z$ be the Portsmouth number of the slowest, "scratch" boat
 class and $ET_Z$ be the anticipated elapsed time for
 a boat in that class on the course. The offset start time
-for another class $A$ is:
+for another class is:
 
 \begin{equation}
-\Delta t_A = ET_Z \times \left(\dfrac{PN_Z}{PN_A} - 1\right)
+\Delta T = ET_Z \times \left(1 - \dfrac{PN}{PN_Z}\right)
 \end{equation}
 
-In a pursuit race that an RS Zest will start at noon and is expected to
-complete in one hour, the start times for the other boats are:
+For example, in a pursuit race that an RS Zest will start at 14:30 (2:30 PM) and
+is expected to complete in 1.5 hours, the start times for the other
+boats should be:
 
-Boat     | PN   | Adjustment | Start Time
----------|-----:|-----------:|----------:
-RS Zest  | 1260 |  +0 s      | 12:00:00
-I420     | 1111 |  +483 s    | 12:08:03
-Laser 7  | 1101 |  +520 s    | 12:08:40
-Wayfarer | 1101 |  +520 s    | 12:08:40
-Laser Vago|1064 |  +663 s    | 12:10:33
-RS Aero 9| 1010 |  +891 s    | 12:14:51
-29er     |  922 |  +1320 s   | 12:22:00
-RS 800   |  799 |  +2077 s   | 12:34:37
+<script>
+{
+let s = `
+Class    | PN   | Start Adjustment | (m:s) | Start Time
+---------|-----:|-----------:|--------:|----------:
+`;
 
+// Sort by handicap
+const boatarray = Object.keys(Portsmouth.handicap);
+boatarray.sort(function (A, B) {
+    return Portsmouth.handicap[B] - Portsmouth.handicap[A];
+});
+
+const ET_Z = 1.5 * secondsPerHour;
+const PN_Z = Portsmouth.handicap['RS Zest'];
+
+for (const boat of boatarray) {
+    const PN = Portsmouth.handicap[boat];
+    const deltaT = ET_Z * (1 - PN / PN_Z);
+    const startT = deltaT + 14.5 * secondsPerHour;
+    s += `${boat} | ${PN} | ${formatTime(deltaT, 'delta s')} | ${formatTime(deltaT, 'delta m:ss')} | ${formatTime(startT, 'h:mm:ss')} \n`;
+}
+
+document.write(s);
+}
+</script>
+
+
+#### Derivation
+
+For the derivation, I shorten the standard notation to $C = CT, E = ET, P = PN$
+and leave out the multiplication signs.
+
+The corrected times for the scratch boat $Z$ and another, faster boat
+are given by:
+
+\begin{eqnarray}
+\label{eqn:CZ} C_Z &=& E_Z \dfrac{1000}{P_Z} \\
+C &=& E \dfrac{1000}{P} \\
+\end{eqnarray}
+
+Our goal is for all boats to finish at the same wall clock time of day
+with staggered starts. That means for each boat
+
+\begin{equation}
+E + \Delta T = E_Z
+\end{equation}
+
+The elapsed time $E_Z$ of the scratch boat is fixed. We need to find
+the $\Delta T$ such that on corrected time, $C_Z = C$ and all boats
+would tie. Rearranging to expose the key variables gives:
+
+\begin{eqnarray}
+\Delta T &=& E_Z - E \\
+E &=& C \dfrac{P}{1000} \\
+E_Z &=& C_Z \dfrac{P_Z}{1000} \\
+C &=& C_Z
+\end{eqnarray}
+
+Substituting and simplifying provides the solution:
+
+\begin{eqnarray}
+\Delta T &=& C_Z \dfrac{P_Z}{1000} - C_Z \dfrac{P}{1000}\\
+\Delta T &=& C_Z \dfrac{P_Z - P}{1000}
+\end{eqnarray}
+
+We need this in terms of the actual elapsed time of the scratch boat, $E_Z$,
+so substitute that from equation \ref{eqn:CZ}:
+
+\begin{eqnarray}
+\Delta T &=& E_Z \dfrac{1000}{P_Z}  \dfrac{P_Z - P}{1000}\\
+\Delta T &=& E_Z \dfrac{P_Z - P}{P_Z}\\
+\Delta T &=& E_Z \left(1 - \dfrac{P}{P_Z}\right)
+\end{eqnarray}
 
 <style>
 .md table.table th {

@@ -42,6 +42,11 @@ of your environment and conditions. Adapt your techniques appropriately to each 
 
 em.asterisk { font-style: normal; font-weight: bold; }
 body {max-width: 800px !important; padding-top: 60px}
+
+/* Hide the "Contents" in medium TOC */
+.md .mediumTOC center {display: none}
+.md .mediumTOC p {margin-top:-26px}
+
 .md div.title {text-align: left; font-size: 35px}
 .md div.subtitle {text-align: left; font-style: italic}
 .md div.title, .md h1, .md .nonumberh1, .md h2, .md .nonumberh2, .md h3, .md h4, .md h5 {font-family: header}

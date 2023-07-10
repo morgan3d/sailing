@@ -39,7 +39,13 @@ let bookshelves = [{
 {title:  'Stress-Free Sailing',
  url:    'https://amzn.to/426xzVc', 
  author: 'Wells 2021',
- image:  'amzn://51ixiRLFjmL'}
+ image:  'amzn://51ixiRLFjmL'},
+
+
+{title: "The Cruiser's Handbook of Fishing",
+ url: 'https://amzn.to/3rlYxuk',
+ author: "Bannerot and Bannerot 2003",
+ image: 'amzn://51t3IOSFRSL'}
 ]},
 
 

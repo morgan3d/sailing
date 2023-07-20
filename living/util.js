@@ -34,8 +34,8 @@ function scrollerCallback(scrollerIndex, delta, absolute) {
     const img = document.getElementById('scroller' + scrollerIndex);
     img.src = scroller.filenamePattern.replace(/#/, '' + (scroller.i0 + scroller.currentIndex));
 
-    oldDot.innerHTML = '⎔';
-    newDot.innerHTML = '⬣';
+    oldDot.innerHTML = '○';
+    newDot.innerHTML = '●';
 }
 
 
@@ -53,7 +53,7 @@ function makeScroller(filenamePattern, i0, N) {
 
     let dots = '';
     for (let i = 0; i < N; ++i) {
-        dots += `<span class="dot" id="scroller${scrollerIndex}Dot${i}" onclick="scrollerCallback(${scrollerIndex}, undefined, ${i})">${i == 0 ? '⬣' : '⎔'}</span>`;
+        dots += `<span class="dot" id="scroller${scrollerIndex}Dot${i}" onclick="scrollerCallback(${scrollerIndex}, undefined, ${i})">${i == 0 ? '●' : '○'}</span>`;
     }
     
     document.write(`<table class="scroller">

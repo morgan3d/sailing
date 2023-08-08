@@ -35,6 +35,27 @@ let bookshelves = [{
  author: 'Cort and Stearns 2013',
  image: 'amzn://51t6Ry+uPLL'
 },
+
+    {
+        title: 'Illustrated Sail and Rig Tuning',
+        url: 'https://amzn.to/44TVqIS',
+        author: 'Dedekam 2000',
+        image: 'amzn://51WgNZJd-+L'
+    },
+
+    {
+        title: "The Voyager's Handbook",
+        url: 'https://amzn.to/3KsFJQP',
+        author: 'Leonard 2006',
+        image: 'amzn://5117N4IiAyL'
+    },
+
+    {
+        title: 'The Annapolis Book of Seamanship',
+        url: 'https://amzn.to/45ifWmb',
+        author: 'Rousmaniere 2014',
+        image: 'amzn://514pEmp10aL'
+    },
     
 {title:  'Stress-Free Sailing',
  url:    'https://amzn.to/426xzVc', 

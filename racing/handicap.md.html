@@ -1,6 +1,6 @@
-              <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
+     <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
                   **Sailboat Racing Handicaps**
-                 Published 2023-06-29; Updated 2023-08-13
+            Published 2023-06-29; Updated 2023-08-29
 
 <script src="handicap.js"></script>
 
@@ -150,30 +150,47 @@ Lead Times
 How much time do you need to beat another boat by to rank higher
 than it?
 
-A faster boat A ranks higher in the race than a slower boat B
-if B finishes more than
+A faster boat _f_ ranks higher in the race than a slower boat _s_
+if _s_ finishes more than
 
 \begin{equation}
-\Delta T > ET_A \left(\dfrac{PN_B}{PN_A} - 1\right)
+\Delta T > ET_f \left(\dfrac{PN_s}{PN_f} - 1\right)
 \end{equation}
 
-seconds later. Conversely, boat B ranks higher if it finishes
+seconds later. Conversely, boat _s_ ranks higher if it finishes
 less than $\Delta T$ seconds later.
 
 For example, in a race that a Laser 7 finishes in 
 $ET$ = 20 minutes, these boats need to finish by the following
 elapsed times to tie it:
 
-Boat     | PN   | Adjustment | ET To Tie
----------|-----:|-----------:|----------:
-RS Zest  | 1260 |  -173 s    | 22:53
-I420     | 1111 |  -11 s     | 20:11
-Laser 7  | 1101 |  +0 s      | 20:00
-Wayfarer | 1101 |  +0 s      | 20:00
-Laser Vago|1064 |  +40 s     | 20:43
-RS Aero 9| 1010 |  +99 s     | 18:21
-29er     |  922 |  +195 s    | 16:45
-RS 800   |  799 |  +329 s    | 14:30
+<script>
+{
+let s = `
+Class    | PN   | Adjustment | ET To Tie ILCA 7 |
+---------|-----:|-----------:|----------:|
+`;
+
+// Sort by handicap
+const boatarray = Object.keys(Portsmouth.handicap);
+boatarray.sort(function (A, B) {
+    return Portsmouth.handicap[B] - Portsmouth.handicap[A];
+});
+
+const ET_f = 20 * secondsPerMinute;
+const PN_f = Portsmouth.handicap['ILCA 7'];
+
+for (const boat of boatarray) {
+    const PN_s = Portsmouth.handicap[boat];
+    const deltaT = ET_f * (PN_s / PN_f - 1);
+    const ET_s = ET_f + deltaT;
+    s += `${boat} | ${PN_s} | ${formatTime(deltaT, 'delta s')} | ${formatTime(ET_s, 'delta m:ss')} \n`;
+}
+
+document.write(s);
+}
+</script>
+
 
 Pursuit Offsets
 ----------------------------------------------------------------
@@ -198,7 +215,7 @@ boats should be:
 <script>
 {
 let s = `
-Class    | PN   | Start Adjustment | (m:s) | Start Time
+Class    | PN   | Start Adjustment | &pm;mm:ss | Start Time
 ---------|-----:|-----------:|--------:|----------:
 `;
 

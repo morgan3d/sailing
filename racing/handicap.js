@@ -12,9 +12,9 @@ function formatTime(s, fmt) {
     s = Math.round(s);
     switch (fmt) {
     case 'delta s':
-        return ((s >= 0) ? '+' : '-') + s + ' s';
+        return ((s >= 0) ? '+' : '') + s + ' s';
     case 'delta m:ss':
-        return ((s >= 0) ? '+' : '-') + Math.floor(s / 60) + ':' + twoDigit(s % 60);
+        return ((s >= 0) ? '+' : '') + Math.floor(s / 60) + ':' + twoDigit(s % 60);
     case 'h:mm:ss':
         {
             let m = Math.floor(s / secondsPerMinute);
@@ -41,12 +41,20 @@ const Portsmouth = {
     // Updated 2023
     handicap: {
         'RS Zest': 1260,
+        'Topaz Uno Plus': 1255,
+        'Hartley H12 Racer': 1250,
+        'RS Neo': 1180,
         'I420': 1111,
-        'ILCA 7': 1101,
+        'ILCA 6': 1147,
+        'Byte CII': 1135,
         'Wayfarer': 1101,
+        'ILCA 7': 1101,
         'Laser Vago': 1064,
+        'RS Aero 7': 1063,
         'RS Aero 9': 1010,
+        'Buccaneer 18': 978,
         '29er': 922,
+        'VX One': 802,
         'RS 800': 799
     }
 };

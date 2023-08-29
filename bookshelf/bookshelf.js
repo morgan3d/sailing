@@ -193,7 +193,7 @@ let bookshelves = [{
  author: "Miles Smeeton",
  image: "amzn://51tkwDv66ZL"},
 
-     {title:'Flirting with Mermaides',
+     {title:'Flirting with Mermaids',
       url: 'https://amzn.to/47ATjM3',
       author: 'John Kretschmer',
       image: 'amzn://519k-awRjQL'}

@@ -14,7 +14,9 @@ function formatTime(s, fmt) {
     case 'delta s':
         return ((s >= 0) ? '+' : '') + s + ' s';
     case 'delta m:ss':
-        return ((s >= 0) ? '+' : '') + Math.floor(s / 60) + ':' + twoDigit(s % 60);
+        return ((s >= 0) ? '+' : '-') + Math.floor(Math.abs(s) / 60) + ':' + twoDigit(Math.abs(s) % 60);
+    case 'm:ss':
+        return Math.floor(s / 60) + ':' + twoDigit(Math.abs(s) % 60);
     case 'h:mm:ss':
         {
             let m = Math.floor(s / secondsPerMinute);

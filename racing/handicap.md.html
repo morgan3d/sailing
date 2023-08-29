@@ -167,8 +167,8 @@ elapsed times to tie it:
 <script>
 {
 let s = `
-Class    | PN   | Adjustment | ET To Tie ILCA 7 |
----------|-----:|-----------:|----------:|
+Class    | PN   | Adjustment | &pm;mm:ss | ET To Tie ILCA 7 |
+---------|-----:|-----------:|---------:|----------:|
 `;
 
 // Sort by handicap
@@ -184,7 +184,7 @@ for (const boat of boatarray) {
     const PN_s = Portsmouth.handicap[boat];
     const deltaT = ET_f * (PN_s / PN_f - 1);
     const ET_s = ET_f + deltaT;
-    s += `${boat} | ${PN_s} | ${formatTime(deltaT, 'delta s')} | ${formatTime(ET_s, 'delta m:ss')} \n`;
+    s += `${boat} | ${PN_s} | ${formatTime(deltaT, 'delta s')} | ${formatTime(deltaT, 'delta m:ss')} | ${formatTime(ET_s, 'm:ss')} \n`;
 }
 
 document.write(s);

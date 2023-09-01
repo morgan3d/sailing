@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="600" height="600" viewBox="0 0 2 2">
-<path d="M0,0h1v2H0z" fill="#ff0"/>
-<path d="M1,0h1v2H1z" fill="#00f"/>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="600" height="600">
+<path d="M0,0h300v600H0z" fill="#ff0"/>
+<path d="M300,0h300v600H300z" fill="#00f"/>
+<rect fill="none" width="600" height="600" stroke="#000" stroke-width="2px"/>
 </svg>
 

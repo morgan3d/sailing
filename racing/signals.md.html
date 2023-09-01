@@ -1,0 +1,67 @@
+              <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
+                 **Sailboat Race Committee Signals**
+               Published 2023-09-10; Updated 2023-09-10
+
+This article describes the sound signals and 
+flags used by a sailboat race committee under the
+2021-2024 [racing rules of sailing (RRS)](https://www.sailing.org/inside-world-sailing/rules-regulations/racing-rules-of-sailing/).
+
+All Flags
+====================================================================
+
+The flags for signaling during racing are the standard international
+maritime signal flags under the
+[International Code of Signals (ICS)/INTERCO](https://msi.nga.mil/api/publications/download?key=16694273/SFH00000/Pub102bk.pdf&type=view),
+plus an orange and a blue flag.
+However, the flag _interpretation_ differs from the ICS, and the sound
+signals do not match the Morse code for the flags from ICS.
+
+In racing, the Code/Answer flag is referred to as the "Answering
+Pennant" and abbreviated "AP". The first repeater/Repeat 1 flag
+is referred to as the "General Recall" flag.
+
+<script>
+{
+const flag_array = [
+    'alfa', 'bravo', 'charlie', 'delta', 'echo', 'foxtrot', 'golf',
+    'hotel', 'india', 'juliett', 'kilo', 'lima', 'mike', 'november',
+    'oscar', 'papa', 'quebec', 'romeo', 'sierra', 'tango', 'uniform',
+    'victor', 'xray', 'whiskey', 'zulu', 'start_flag', 'finish_flag',
+    'repeat_1', 'repeat_2', 'repeat_3',
+    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+    'code' 
+    ];
+
+let s = '\n';
+for (let i = 0; i < flag_array.length; ++i) {
+    let flag = flag_array[i];
+    let path = '../ICS/';
+    let caption = flag.replace('_', '&nbsp;')
+    
+    if (flag.indexOf('flag') !== -1) {
+        // Orange and blue specific to racing
+        path = '';
+        if (flag === 'start_flag') {
+            caption = "Orange/Start";
+        } else {
+            caption = "Blue/Finish";
+        }
+    } else if (flag === 'code') {
+        caption += ' ("AP")';
+    }
+    
+    caption = caption.charAt(0).toUpperCase() + caption.slice(1);
+    
+    s += `![${caption}](${path}${flag}.svg class="flag") `;
+    if (i % 6 == 5) { s += '\n'; }
+}
+document.write(s);
+}
+</script>
+
+<style>
+.flag {width:120px}
+</style>
+
+
+<script src="../sailing.js"> </script>

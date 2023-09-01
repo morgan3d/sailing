@@ -2,8 +2,16 @@
 <svg
 xmlns="http://www.w3.org/2000/svg"
 xmlns:xlink="http://www.w3.org/1999/xlink"
-version="1.0" width="600" height="600">
-<rect fill="yellow" width="600" height="600" />
-<rect fill="#0000ff" y="120" width="600" height="360" />
+version="1.0"
+width="600"
+height="600"
+>
+<rect
+fill="blue"
+x="0"
+y="0"
+width="600"
+height="600"
+/>
 <rect fill="none" width="600" height="600" stroke="#000" stroke-width="2px"/>
 </svg>

@@ -4,5 +4,6 @@ xmlns:xlink="http://www.w3.org/1999/xlink"
 version="1.0" width="600" height="600">
 <rect x="0" y="0" width="600" height="600" fill="blue" />
 <rect x="0" y="200" width="600" height="200" fill="white" />
+<rect fill="none" width="600" height="600" stroke="#000" stroke-width="2px"/>
 </svg>
 

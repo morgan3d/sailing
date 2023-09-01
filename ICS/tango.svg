@@ -6,5 +6,6 @@ version="1.0" width="600" height="600">
 <rect x="0" y="0" width="200" height="600" fill="red" />
 <rect x="200" y="0" width="200" height="600" fill="white" />
 <rect x="400" y="0" width="200" height="600" fill="blue" />
+<rect fill="none" width="600" height="600" stroke="#000" stroke-width="2px"/>
 </svg>
 

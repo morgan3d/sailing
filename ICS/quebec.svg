@@ -13,7 +13,5 @@ y="0"
 width="600"
 height="600"
 />
-
-
-
+<rect fill="none" width="600" height="600" stroke="#000" stroke-width="2px"/>
 </svg>

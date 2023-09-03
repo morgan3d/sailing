@@ -55,6 +55,7 @@ const Portsmouth = {
         'RS Aero 7': 1063,
         'RS Aero 9': 1010,
         'Buccaneer 18': 978,
+        'Fireball': 956,
         '29er': 922,
         'VX One': 802,
         'RS 800': 799

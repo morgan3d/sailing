@@ -45,7 +45,7 @@ const BLUE = ['Blue', 'finish_flag.svg'];
 const ORANGE = ['Orange', 'start_flag.svg'];
 
 const sections = [
-  ["Other",
+  ["Special",
     [ORANGE], '', 'The staff displaying this flag is one end of the starting line.',
     [BLUE], '', 'The staff displaying this flag is one end of the finishing line.',
     [L], '^.', 'Ashore: A notice to competitors has been posted. Afloat: Come within hail or follow this vessel.',
@@ -94,7 +94,8 @@ let s = '';
 
 for (section of sections) {
    s += 
-`${'#'} ${section[0]}
+`
+${'#'} ${section[0]}
 
 Flag | Sound | Meaning
 -----|-------|--------

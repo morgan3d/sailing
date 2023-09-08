@@ -1,19 +1,23 @@
               <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
                  **Sailboat Race Committee Signals**
-               Published 2023-09-10; Updated 2023-09-10
+               Published 2023-09-07; Updated 2023-09-07
 
 This article describes the sound signals and 
 flags used by a sailboat race committee under the
 2021-2024 [racing rules of sailing (RRS)](https://www.sailing.org/inside-world-sailing/rules-regulations/racing-rules-of-sailing/).
 
-The start sequence is:
+The starting sequence is:
 
-- Orange flag already flying
-- Optional series of sound signals alerting everyone
-- 5 min: Class flag raised
-- 4 min: Preparatory flag raised, which is one of P, I, Z, Z over I, U, or black flag
-- 1 min: Preparatory flag lowered.
-- 0 min: Class flag removed
+Time | All&nbsp;Flags&nbsp;Flying | Sound Signal | Notes
+-----|------------------|--------------|-----------------
+     | ![](start_flag.svg class="tinyflag")| &bull;&bull;&bull;&bull;&bull;&bull; (optional) | Orange flag already flying, start of racing for the day.
+5 min| ![](start_flag.svg class="tinyflag")&nbsp;![](j24_flag.png class="tinyflag")| &bull; | Class flag raised. Boats are not yet *racing*.
+4 min| ![](start_flag.svg class="tinyflag")&nbsp;![](j24_flag.png class="tinyflag")&nbsp;![](../ICS/papa.svg class="tinyflag")| &bull; | Preparatory flag raised, which is one of P, I, Z, Z over I, U, or black flag. Boats are now *racing*, but not *fetching the start line*.
+1 min| ![](start_flag.svg class="tinyflag")&nbsp;![](j24_flag.png class="tinyflag")| &bull; | Preparatory flag lowered. Any rule 30 penalties will now be active.
+0 min| ![](start_flag.svg class="tinyflag")| &mdash; | Class flag removed, start!
+
+The *class flag* is a class-specific rectangular flag. The race committee may 
+specify any unused flag instead if there
 
 The finish line is marked by a blue flag at one end, unless the course
 has been shortened. In that case, the finish line is marked by the S flag.
@@ -21,8 +25,10 @@ has been shortened. In that case, the finish line is marked by the S flag.
 <script>{
 const AP = ['AP', '../ICS/code.svg'];
 const A = ['A', '../ICS/alfa.svg'];
+const C = ['C', '../ICS/charlie.svg'];
 const H = ['H', '../ICS/hotel.svg'];
-const I = ['A', '../ICS/india.svg'];
+const I = ['I', '../ICS/india.svg'];
+const L = ['L', '../ICS/lima.svg'];
 const M = ['M', '../ICS/mike.svg'];
 const N = ['N', '../ICS/november.svg'];
 const P = ['P', '../ICS/papa.svg'];
@@ -31,17 +37,18 @@ const U = ['U', '../ICS/uniform.svg'];
 const V = ['V', '../ICS/victor.svg'];
 const X = ['X', '../ICS/xray.svg'];
 const Y = ['Y', '../ICS/yankee.svg'];
-const Z = ['V', '../ICS/zulu.svg'];
+const Z = ['Z', '../ICS/zulu.svg'];
 const ONE = ['1', '../ICS/1.svg'];
 const FIRST = ['First&nbsp;Sub', '../ICS/repeat_1.svg'];
 const BLACK = ['Black', 'black_flag.svg'];
+const BLUE = ['Blue', 'finish_flag.svg'];
 const ORANGE = ['Orange', 'start_flag.svg'];
 
 const sections = [
   ["Other",
     [ORANGE], '', 'The staff displaying this flag is one end of the starting line.',
     [BLUE], '', 'The staff displaying this flag is one end of the finishing line.',
-    [L], '^.', 'Ashore: A notice to competitors has been posted. Afloat: Come within hail or follow this vessel.'
+    [L], '^.', 'Ashore: A notice to competitors has been posted. Afloat: Come within hail or follow this vessel.',
     [Y], '^.', 'Wear a personal flotation device (see rule 40).' 
   ],
     
@@ -64,19 +71,20 @@ const sections = [
     [P], '^.v-', 'Normal preparatory (4 min to start). This marks the start of *racing* in the rules.',
     [I], '^.v-', 'Rule 30.1 in effect. Any boat over the line within one minute of the start must sail across an extension.',
     [Z], '^.v-', 'Rule 30.2 in effect. Any boat over the line within one minute of the start 20% scoring penalty unless restarted or abandoned _before_ the start.',
-    [Z, I], '^.v-', '???',
+    [Z, I], '^.v-', 'Rules 30.1 and 30.2 in effect.',
     [U], '^.v-', 'Rule 30.3 in effect. Any boat over the line within one minute of the start is disqualified unless the race is postponed or abandoned.',
     [BLACK], '^.v-', 'Rule 30.4 in effect. Any boat over the line within one minue of the start is disqualified unless the race is postponed or abandoned _before_ the starting signal.'
   ],
   
   ["Recall",
     [X], '^.', 'Individual recall',
-    [FIRST], '^..v.', 'General recall. General recall. The warning signal will be made 1 minute after removal.',
+    [FIRST], '^..v.', 'General recall. The warning signal will be made 1 minute after removal.',
   ],
   
   ["Change on Course",
     [S], '^..', 'The course has been shortened. Rule 32.2 is in effect. The new finish line is between the S flag and a mark, between the two marks of a gate, or on a line that boats are required to cross.',
     [M], '', 'The object flying this flag replaces a missing mark.',
+    [C], '', 'The position of the next mark has been changed. The other flags indicate how. Green triangle: to starboard; Red square: to port; Minus: shorter; Plus: longer.'
     
   ],
  
@@ -86,8 +94,7 @@ let s = '';
 
 for (section of sections) {
    s += 
-`
-# ${section[0]}
+`${'#'} ${section[0]}
 
 Flag | Sound | Meaning
 -----|-------|--------
@@ -173,6 +180,7 @@ document.write(s);
 
 <style>
 .flag {width:80px}
+.tinyflag{height:20px}
 </style>
 
 

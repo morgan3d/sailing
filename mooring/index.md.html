@@ -765,20 +765,248 @@ Med Mooring
 ----------------------------------------------------------------------------
 
 
-Attaching to Ground
+Anchoring
 ============================================================================
 
-Hand Signals
+Scope
+----------------------------------------------------------------------------
+
+Anchors operate by digging into the sea bottom under the water. They
+are heavy by human standards, but not heavy compared to the mass of
+the boat. The weight of the anchor helps it to reach the bottom
+quickly and to dig in. The anchor pulling _sideways_ along the bottom
+is then what keeps the boat in place. For the anchor to pull sideways,
+it must have a sufficiently long connection to the boat that it is not
+being pulled up at a steep angle. In fact, pulling at a steep angle is
+exactly how you recover your anchor when departing, so will not help
+you overnight.
+
+*Rode* is the chain and line connecting the anchor to the
+boat. *Scope* is the ratio of rode length deployed to distance from
+the anchor roller to the bottom. A 7:1 scope means that rode is 
+seven times longer than the longest vertical distance expected between
+the anchor roller and the bottom during the period that the boat
+will be anchored.
+
+The anchor end of the rode is always chain to help it lie flat along
+the sea bottom and also protect it from chafing on rocks
+underwater. The boat end of the road may be line or chain. Chain is
+stronger, more chafe resistant, and hangs better. Line is lighter,
+making it easier to work with and reducing strain on the boat in heavy
+seas. 
+
+Unless under extreme tension from strong current or there is
+insufficient scope, the rode hangs in a catenary curve and not a
+straight line. It falls away from the boat at a steep angle, curves
+underwater, and comes in to the anchor at the bottom at a shallow
+angle.
+
+A 4:1 scope is usually sufficient for a short lunch break, fishing, or
+on a race committee signal boat. These are cases when there will be
+crew awake, on board, and aware of their environment. It isn't a
+problem if the anchor drags a little in this situation because the
+crew can actively handle the boat and the conditions are unlikely to
+change rapidly.
+
+The commonly recommended figure for overnight anchoring or leaving the
+boat is 7:1 scope. If leaving the boat for more than a few hours or
+expecting a storm, 10:1 scope is often recommended. In a strong storm,
+multiple anchors or tying to shore may be required as well. The actual
+holding power depends on the type of anchor, type of bottom (e.g.,
+sand, rock, grass, mud), windage of the boat, wind, and
+current. Environmental conditions can change unexpectedly, you may not
+be able to observe the bottom type, and your plans may change once you
+"anchor for only lunch and a swim" or you go ashore "for only two
+hours". So, it pays to be conservative when deciding the scope to use
+and consider the _worst_ case that your boat may experience instead of
+the case that you _expect_.
+
+The primary downside of excess scope is that the boat will swing in a
+large circle. A larger swing limits the locations where you can anchor
+to those where the bottom does not rapidly get shallow, where there
+are no obstructions, and where there are few other boats. If you do
+not have a powered windlass (or your windlass fails), you will also be
+recovering that excess scope by hand when leaving anchor.
+
+
+Rode Length
+----------------------------------------------------------------------------
+
+The rode length deployed is the selected scope multiplied by the
+distance to the bottom. However, determining the actual distance to
+the bottom requires care. _It is not the current value on the depth
+sounder!_
+
+To determine the distance you'll need a tide chart, weather forecast,
+and three numbers describing your boat. Ensure that you have these or
+a way to determine them before leaving the shore:
+
+Depth Sounder Offset
+: Calibrate your depth sounder before leaving the dock. Drop a weighted
+  line to the bottom and measure the difference between what the sounder
+  reads and how far it actually is from the water to the botton. In
+  addition to detecting simple errors, a laden boat might be riding low.
+  Or, if it isn't your boat, the sounder might be measuring distance
+  from the keel instead of the waterline, or have more conservative
+  padding to keep charter captains from running aground.
+  
+  In the equations below, the offset is the actual depth minus the
+  sounder reading. It is usually a positive number: the additional
+  amount of water between the surface and the point the sounder is
+  measuring from.
+
+Bow Height
+: Measure the distance from the anchor roller to the water. This may be
+  higher than the freeboard. For a sailboat, this is probably about 1-2
+  meters depending on the size of the boat.
+
+Draft
+: Finally, look up the draft of your boat--the distance from waterline
+  to bottom of the keel. If the actual waterline on the boat is below
+  the painted line, add this to your reported draft. If you have twin
+  keels or a winged keel, then add a healthy amount to the measurement
+  to compensate for the fact that the draft will increase as the boat
+  rolls.
+
+Use the chart to understand the general slope of the bottom and
+whether there are any underwater hazards or sudden depths and
+shallows. Do not depend on the chart or GPS for the actual depth at
+your location. They are insufficiently accurate and silting and
+dredging can radically change the values. Trust what you measure in
+person, not a chart.
+
+Sometimes a depth sounder fails or reports questionable values when
+anchoring. In that case, conservatively estimate depth from the chart
+_and then actually measure it_ with a weighted line after
+anchoring. Adjust the rode to compensate for any deviation between the
+original estimate and the actual measurment.
+
+You need sufficiently high $\operatorname{MinDepth}$ to not run
+aground at low tide, and then compute scope by the
+$\operatorname{MaxDepth}$. Look at the tide table for the current date
+_and the weather forecast_ for the $\operatorname{TideNow}$ and then
+look ahead for the minimum and maximum values over the period that
+you'll be anchored in the worst case. Note that the minimum tide value
+might be negative--that means that in the period the depth will go
+below the average low value reported on the chart. 
+
+It is important to check the weather forecast as well as the tide
+chart because weather affects the tide. A low pressure weather system
+can increase the tide height and a high pressure system can decrease
+it. Strong winds can also blow water in or out of an anchorage. If
+anchoring in or near a river, a recent or incoming heavy rain may also
+increase the depth substantially while you are anchored.
+
+Before approaching the anchorage, compute your _expected_ distance to
+the bottom from the the chart. Use that to work out the following
+values without time pressure, and then adjust them in the moment based
+on the _actual_ depth you observe when anchoring.
+
+
+
+Site Selection
 ----------------------------------------------------------------------------
 
 
-Anchoring
+
+Hand Signals
 ----------------------------------------------------------------------------
 
 
 Mooring Balls
 ----------------------------------------------------------------------------
 
+
+Anchoring Process Checklist
+--------------------------------------------------------------------------
+
+Before setting out for the day (from shore or the previous anchorage):
+
+1. Measure and remember $\mathbf{SounderOffset}$
+2. Determine and remember the $\mathbf{Draft}$ for the boat
+3. Get a tide chart and weather forecast
+4. Get a chart of the anchorage
+5. Make a backup plan for if the anchorage is unexpectedly crowded or
+   unprotected
+
+
+Before approaching the anchorage:
+
+1. Choose the $\mathbf{Scope}$ warranted by the environmental conditions you observe,
+   the weather forecast, and the plans you have
+1. Determine $\operatorname{TideNow}$, $\operatorname{MinTide}$, and $\operatorname{MaxTide}$
+   by looking at the tide chart and adjusting for local weather
+2. Compute $\operatorname{ExpectedDepthNow} = \operatorname{TideNow} + \operatorname{ChartDatum}$
+2. Compute and remember $\mathbf{ExpectedSounderReading} = \operatorname{ExpectedDepthNow} - \operatorname{SounderOffset}$
+3. Compute $\operatorname{MinDepth} = \operatorname{ExpectedDepthNow} - \operatorname{MinTide}$
+4. Compute $\operatorname{MaxDepth} = \operatorname{ExpectedDepthNow} - \operatorname{TideNow} + \operatorname{MaxTide}$
+5. Verify that $\operatorname{MinDepth}$ is deeper than your boat's draft
+7. Compute and remember $\mathbf{ExpectedRodeLength} = \operatorname{Scope} \times (\operatorname{MaxDepth} + \operatorname{BowHeight})$
+8. Verify that you have enough clear water for the swing radius, which is conservatively $\operatorname{RodeLength}$.
+9. Look up the color coding for your rode, and ensure that the bow crew knows 
+   both the desired rode length and the color tag or pattern to look for on
+   the rode.
+10. Review anchoring hand signals and voice commands with the bow crew and helmsperson
+
+
+When anchoring:
+
+1. Ensure no lines are dragging in the water
+1. Start the engine and verify that it is expelling cooling water
+1. Switch on the steaming light
+2. Drop the sails
+3. Scout the anchorage:
+  1. Look at how and where other boats are anchored (and check for signs of competence/incompetence)
+  2. Think about where the anchors and lines for the other boats are if they have 7:1 scope out
+  3. Check the actual depth soundings in an area around where
+  4. Verify protection from wind and waves
+  5. If it is a controlled harbor, contact the harbormaster on cell phone or VHF
+4. Adjust your rode length for difference between
+   the expected sounder reading and the actual one, and
+   brief the crew: $\mathbf{RodeLength} = \operatorname{ExpectedRodeLength} + \operatorname{Scope} \times (\operatorname{ActualSounderReading} - \operatorname{ExpectedSounderReading})$
+5. Send the bow crew forward
+6. Untie the anchor retaining line
+7. Drift to a stop over the center of the desired circle
+8. *Set the anchor alarm drop point*
+9. Drop the anchor while drifting backwards
+10. Stop dropping at the desired rode length
+11. Gently increase reverse throttle to dig in the anchor (the boat will go backwards a bit as the line straightens out)
+12. Take a transit to verify no dragging
+13. Gently ease the throttle back towards neutral (the boat will move forwards a bit as the line falls into a curve)
+14. Take another transit to verify no dragging
+15. Turn off the engine
+16. Tie the snubber and ease some slack in the rode on the windlass
+17. *Set the anchor alarm radius*
+18. *Switch on the anchor light*
+19. Switch off the navigation lights
+20. Raise the anchoring ball signal (black ball)
+21. Secure the halyards to avoid banging in the night
+
+
+While at anchor, periodically check:
+
+1. The location of other boats. Are they dragging? Doing anything weird? Swinging close?
+2. A transit against shore to verify no drag
+3. The anchor alarm. Is it still working? How is the swing?
+4. The sounder depth versus the tide prediction
+5. Wind and current. Are the conditions what you expected? Is more rode required?
+
+
+When leaving anchor:
+
+1. Review the plan for exiting the anchorage.
+2. Review the hand and voice signals with the helmsperson and bow crew
+2. Turn off the anchor alarm
+2. Verify that there are no lines near the propeller
+3. Start the engine and verify that it is cooling
+4. Drop the anchoring ball signal
+5. *Turn off the anchor light* (turn on the navigation lights if needed)
+6. Prepare the sails for raising
+7. Untie the snubber
+7. Slowly drive up on the anchor while raising it
+8. Tie down the anchor
+9. Leave the anchorage
+10. Raise sail and *turn off the steaming light*
 
 
 

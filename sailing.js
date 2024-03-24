@@ -17,7 +17,7 @@ excepting portions credited to other sources. <a rel="license" href="http://crea
 </i>
 </td></tr></table>
 <p style="font-size: 60%; line-height: 110%">
-<b>DISCLAIMER</b>. The contents of these articles is presented as information only, and Morgan McGuire (the Author) makes
+<b>DISCLAIMER</b>. The contents of these articles are presented as information only, and Morgan McGuire (the Author) makes
 no claims, promises, or guarantees about the accuracy, completeness, adequacy, or
 applicability of the procedures, instructions, and opinions herein. The Author
 expressly disclaims liability for errors and omissions that any readers

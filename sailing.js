@@ -11,7 +11,7 @@ document.write(`
 </td><td width=30px> </td><td><i style="font-size:95%">
 This article is part of Morgan's <a href="${baseURL}/index.md.html">Sailing Codex</a> collection of notes.
 <br>
-<br>&copy; 2022-2023 <a href="https://casual-effects.com">Morgan McGuire</a>.
+<br>&copy; 2022-2024 <a href="https://casual-effects.com">Morgan McGuire</a>.
 The work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>,
 excepting portions credited to other sources. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
 </i>

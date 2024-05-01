@@ -40,23 +40,28 @@ const Portsmouth = {
         return ET_Z * (1 - PN / PN_Z);
     },
 
-    // Updated 2023
+    // Updated 2024
     handicap: {
         'RS Zest': 1260,
         'Topaz Uno Plus': 1255,
         'Hartley H12 Racer': 1250,
         'RS Neo': 1180,
+        'Enterprise': 1117,
         'I420': 1111,
         'ILCA 6': 1147,
         'Byte CII': 1135,
         'Wayfarer': 1101,
-        'ILCA 7': 1101,
+        'ILCA 7': 1109,
+        'OK': 1100,
+        'Tasar': 1015,
         'Laser Vago': 1064,
-        'RS Aero 7': 1063,
-        'RS Aero 9': 1010,
+        'RS Aero 5': 1141,
+        'RS Aero 6': 1102,
+        'RS Aero 7': 1061,
+        'RS Aero 9': 1008,
         'Buccaneer 18': 978,
-        'Fireball': 956,
-        '29er': 922,
+        'Fireball': 955,
+        '29er': 895,
         'VX One': 802,
         'RS 800': 799
     }

@@ -1,6 +1,6 @@
      <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
                   **Sailboat Racing Handicaps**
-            Published 2023-06-29; Updated 2024-04-01
+            Published 2023-06-29; Updated 2024-04-20
 
 <script src="handicap.js"></script>
 
@@ -23,6 +23,34 @@ The [Offshore Racing Congress Rule](https://orc.org/organization)
 longer offshore races. I do not discuss it here.
 
 Previous handicap systems such as IOR, IMS, and US DPN are now obsolete.
+
+<script>
+// Boats at Conestoga, Cadboro Bay, and RVYC
+const common_boatarray = [
+        'RS Zest',
+        'Topaz Uno Plus',
+        'Hartley H12 Racer',
+        'Enterprise',
+        'I420',
+        'ILCA 6',
+        'Byte CII',
+        'Wayfarer',
+        'ILCA 7',
+        'Tasar',
+        'Laser Vago',
+        'RS Aero 7',
+        'RS Aero 9',
+        'Buccaneer 18',
+        'Fireball',
+        '29er',
+        'VX One',
+        'Swift Solo'
+];
+
+common_boatarray.sort(function (A, B) {
+    return Portsmouth.handicap[B] - Portsmouth.handicap[A];
+});
+</script>
 
 Conversion
 ========================================================================
@@ -171,16 +199,10 @@ Class    | PN   | Adjustment | &pm;mm:ss | ET To Tie ILCA 7 |
 ---------|-----:|-----------:|---------:|----------:|
 `;
 
-// Sort by handicap
-const boatarray = Object.keys(Portsmouth.handicap);
-boatarray.sort(function (A, B) {
-    return Portsmouth.handicap[B] - Portsmouth.handicap[A];
-});
-
 const ET_f = 20 * secondsPerMinute;
 const PN_f = Portsmouth.handicap['ILCA 7'];
 
-for (const boat of boatarray) {
+for (const boat of common_boatarray) {
     const PN_s = Portsmouth.handicap[boat];
     const deltaT = ET_f * (PN_s / PN_f - 1);
     const ET_s = ET_f + deltaT;
@@ -219,16 +241,10 @@ Class    | PN   | Start Adjustment | &pm;mm:ss | Start Time
 ---------|-----:|-----------:|--------:|----------:
 `;
 
-// Sort by handicap
-const boatarray = Object.keys(Portsmouth.handicap);
-boatarray.sort(function (A, B) {
-    return Portsmouth.handicap[B] - Portsmouth.handicap[A];
-});
-
 const ET_Z = 1.5 * secondsPerHour;
 const PN_Z = Portsmouth.handicap['RS Zest'];
 
-for (const boat of boatarray) {
+for (const boat of common_boatarray) {
     const PN = Portsmouth.handicap[boat];
     const deltaT = ET_Z * (1 - PN / PN_Z);
     const startT = deltaT + 14.5 * secondsPerHour;
@@ -290,6 +306,30 @@ so substitute that from equation \ref{eqn:CZ}:
 \Delta T &=& E_Z \dfrac{P_Z - P}{P_Z}\\
 \Delta T &=& E_Z \left(1 - \dfrac{P}{P_Z}\right)
 \end{eqnarray}
+
+
+Portsmouth Yardstick Table
+====================================================================
+
+<script>
+{
+const boatarray = Object.keys(Portsmouth.handicap);
+boatarray.sort(function (A, B) {
+    return Portsmouth.handicap[B] - Portsmouth.handicap[A];
+});
+
+let s = '\nClass    |   PY (2024)\n---------|-------------:\n';
+for (let boat of boatarray) {
+    s += boat + ' | ' + Portsmouth.handicap[boat] + '\n';
+}
+
+document.write(s);
+}
+</script>
+
+
+
+
 
 <style>
 .md table.table th {

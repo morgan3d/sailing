@@ -56,6 +56,11 @@ let bookshelves = [{
         author: 'Rousmaniere 2014',
         image: 'amzn://514pEmp10aL'
     },
+
+{title:  'Weather for the Mariner',
+ url:    'https://www.amazon.com/Weather-Mariner-3rd-William-Kotsch/dp/0870217569/ref=sr_1_1',
+ author: 'Kostsch 1983',
+ image:  'amzn://51WRCQR6A8L'},
     
 {title:  'Stress-Free Sailing',
  url:    'https://amzn.to/426xzVc', 

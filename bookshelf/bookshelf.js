@@ -93,6 +93,11 @@ let bookshelves = [{
  author: "Toss 2016",
  image:  "amzn://51g+We2verL"},
 
+{title:  "This Old Boat",
+ url:    "https://www.amazon.com/This-Old-Boat-Second-Completely/dp/0071477942",
+ author: "Casey 2009",
+ image:  "amzn://61HOi8Ly2iL"},
+
 {title:  "Get Rid of Boat Odors",
  url:    "https://amzn.to/3T7qFuR",
  author: "Hall 2016",

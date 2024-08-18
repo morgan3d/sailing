@@ -7,7 +7,7 @@ document.write(`
 
 <div style="border-top: solid 1px; padding-top:10px">
 <table><tr valign=top><td width=300px>
-<img src="${baseURL}/portrait.jpg" width=370px>
+<img src="${baseURL}/portrait.jpg" width=250px>
 </td><td width=30px> </td><td><i style="font-size:95%">
 This article is part of Morgan's <a href="${baseURL}/index.md.html">Sailing Codex</a> collection of notes.
 <br>

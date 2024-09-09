@@ -118,6 +118,11 @@ let bookshelves = [{
  author:  "Slocum",
   image:   "amzn://5114A7v9ZVL"},
  
+{title:   "An Embarrassment of Mangoes",
+ url:     "https://amzn.to/426R7ck",
+ author:  "Vanderhoof",
+ image:   "amzn://51kT60sa7hL"},
+ 
 {title:   "Two Years Before the Mast",
  url:     "https://amzn.to/3ZXzWYB",
  author:  "Dana",
@@ -177,11 +182,6 @@ let bookshelves = [{
  url:     "https://amzn.to/3J42WXY",
  author:  "Lansing",
  image:   "amzn://51nbCCBDUEL"},
- 
-{title:   "An Embarrassment of Mangoes",
- url:     "https://amzn.to/426R7ck",
- author:  "Vanderhoof",
- image:   "amzn://51kT60sa7hL"},
  
 {title:   "The Mirror of the Sea",
  url:     "https://amzn.to/40LnknV",

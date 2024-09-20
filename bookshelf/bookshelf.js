@@ -157,7 +157,14 @@ let bookshelves = [{
  url:     "https://amzn.to/3kZZeqx",
  author:  "Chichester",
  image:   "amzn://51mwVB6eFzL"},
- 
+
+
+{title:   "Alone Through the Roaring Forties",
+ url:     "https://www.goodreads.com/book/show/113021.Alone_Through_the_Roaring_Forties",
+ author:  "Dumas",
+ image:   "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387714249i/113021.jpg"},
+
+     
 {title:   "Dove",
  url:     "https://amzn.to/425yCET",
  author:  "Graham and Gill",
@@ -172,11 +179,12 @@ let bookshelves = [{
  url:     "https://amzn.to/3LiRxGE",
  author:  "Pardey and Pardey",
  image:   "amzn://51-irzWlToL"},
- 
+
+     /*
 {title:   "Passage to Juneau",
  url:     "https://amzn.to/3ZXBS3x",
  author:  "Raban",
- image:   "amzn://41-WutnD8tL"},
+ image:   "amzn://41-WutnD8tL"}, */
  
 {title:   "The Endurance: Shackleton's Incredible Voyage",
  url:     "https://amzn.to/3J42WXY",

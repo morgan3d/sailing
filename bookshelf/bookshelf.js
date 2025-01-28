@@ -106,7 +106,13 @@ let bookshelves = [{
 {title:   "Fiberglass Boat Repair &amp; Maintenance",
  url:     "https://amzn.to/3K0Iojt",
  image:   "amzn://81Ws9q0Z5vL",
- author:  "(or free [PDF version](https://www.westsystem.com/wp-content/uploads/Fiberglass-Manual-2015.pdf))"}
+ author:  "(or free [PDF version](https://www.westsystem.com/wp-content/uploads/Fiberglass-Manual-2015.pdf))"},
+
+     {title: "The 12-Volt Bible for Boats",
+      url: "https://amzn.to/3E71DbR",
+      image: "amzn://71gFtHj7JBL",
+      author: "Brotherton and Sherman"}
+      
 ]},
 
 

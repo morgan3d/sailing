@@ -1,6 +1,6 @@
      <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
                   **Sailboat Racing Handicaps**
-            Published 2023-06-29; Updated 2025-03-06
+            Published 2023-06-29; Updated 2025-03-07
 
 <script src="handicap.js"></script>
 
@@ -57,18 +57,18 @@ common_boatarray.sort(function (A, B) {
 Conversion
 ========================================================================
 
-The approximate conversions between PHRF, RYA Portsmouth Numbers, and
-US Dixie Portsmouth Numbers are below. The DPN to PN conversion is
-based on fitting a line to the handicaps for the same boats under the
-different systems, and could vary slightly depending on the year in
-which it is computed. 
+Approximate conversions between PHRF, RYA Portsmouth Numbers (PN), and
+US Sailing Dixie Portsmouth Numbers (DPN) are below. The DPN to PN
+conversion is based on fitting a line to the handicaps for the same
+boats under the different systems, and could vary slightly depending
+on the year in which it is computed.
 
 \begin{eqnarray}
 PHRF &=& 6 \times DPN - 330 \\
-DPN &=& \tfrac{1}{6} \times PHRF + 55 \\
+DPN &=& PHRF \div 6 + 55 \\
 PN &=& \tfrac{100}{6} \times DPN - 462 \\
-PN &=& \tfrac{100}{36} \times  PHRF - 1378 \\
-PHRF &=& \tfrac{36}{100} \times  PN + 496
+PN &=& 100 \times PHRF - 455 \\
+PHRF &=& (PN - 455) \div 100
 \end{eqnarray}
 
 PHRF
@@ -85,9 +85,10 @@ PHRFs happen to be calibrated such that almost all boats have a lower
 corrected time _CT_ than elapsed time _ET_. That is, PHRF makes most
 boats virtually faster and is an advantage-based system.
 
-For reference, here are some PHRFs for common boats. Note that these
-values are adjusted for different styles of racing, rigs, crew weight,
-etc. on specific boats.
+For reference, here are some PHRFs for common boats in their standard
+configuration.  Note that these values are adjusted for different
+styles of racing, rigs, crew weight, etc. on specific boats--every
+individual boat must explicitly be assigned a PHRF to race.
 
 <center>
 <table><tr><td>

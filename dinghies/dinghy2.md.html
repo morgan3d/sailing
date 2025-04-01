@@ -1,6 +1,6 @@
           <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
                 **Selected Double-Handed Racing Dinghies**
-               Published 2023-01-22; Last updated 2025-03-06
+               Published 2023-01-22; Last updated 2025-04-01
 
 <script src="../racing/handicap.js"></script>
 <script>function h(boat) { document.write(Portsmouth.handicap[boat]); }</script>
@@ -126,24 +126,35 @@ handicap in other conditions.
 
 ## D-PN
 
-[North American](https://www.ussailing.org/wp-content/uploads/2018/01/2017-North-American-Portsmouth-Yardstick-Handbook.pdf) handicap (this is historically the
-"Dixie-Portsmouth Number", but is officially, confusingly called simply "Portsmouth Yardstick", the same as the UK system)
-managed by US Sailing, where corrected time is given by:
+The deprecated [North American Dixie-Portsmouth Number](https://www.ussailing.org/wp-content/uploads/2018/01/2017-North-American-Portsmouth-Yardstick-Handbook.pdf) handicap 
+is managed by US Sailing. Corrected time is given by:
 
-   $C = T \dfrac{100}{\operatorname{DPN}}$
+   $CT = ET \dfrac{F}{\operatorname{DPN}}$
+   
+where $F$ can be any number chosen constant by the committee over a
+series.  One common values is $F=100$, which is an easy round number.
+Another is $F=83$, because the D-PN system uses the Thistle class as a
+fixed baseline of $DPN=83$. The common ILCA 7 ("Laser Standard") boat
+has an average handicap of $DPN=83$, so choosing $F=83$ gives
+corrected times that are close to elapsed times.
 
-but the D-PN number is adjusted for the wind conditions in ways that vary
-by boat category.
+The D-PN number for a class is adjusted up to 5% for the wind
+conditions in ways that by boat category. For most dinghy classes, the
+handicap grows more advantageous in light winds but in ways that
+differ between dinghies That is, the boats are expected to perform
+worse than proportionally in light wind, but some boats are really
+slow in light wind because they then can't plane or leverage their
+trapezes.
 
 This is related to the PHRF keelboat handicapping system by:
 
 $\operatorname{PHRF} = 6 \times (\operatorname{DPN} - 55)$
 
-The ratings and process are similar to RYA Portsmouth numbers.
+The ratings and process are broadly similar to RYA Portsmouth numbers.
 
-The US numbers have not been updated since 2017 and as of 
+The US Sailing D-PN numbers have not been updated since 2017 and as of 
 [2020](https://www.ussailing.org/news/pyonline-qa/) US Sailing
-appears to intend to adopt UK Portsmouth numbers.
+adopted the RYA Portsmouth numbers.
 
 
 ## First Year

@@ -1,6 +1,6 @@
           <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
                 **Selected Double-Handed Racing Dinghies**
-               Published 2023-01-22; Last updated 2025-04-01
+               Published 2023-01-22; Last updated 2025-04-10
 
 <script src="../racing/handicap.js"></script>
 <script>function h(boat) { document.write(Portsmouth.handicap[boat]); }</script>
@@ -61,7 +61,9 @@ sailor is likely one that is similar to what their neighbors are in.
 **Boat** | [**PY** (2025)](https://www.rya.org.uk/racing/technical/handicap-systems/portsmouth-yardstick "PY") | [**<span style="white-space:nowrap">D-PN</span>** (2017)](https://www.ussailing.org/wp-content/uploads/2018/01/2017-Portsmouth-Precalculated-Classes.pdf "D-PN") | **First Year** | **Trapezes** | **Spinnaker** | **LOA (m)** | **Beam (m)** | **Hull Weight (kg)** | **Downwind Total Sail Area (m^2)** | **Upwind SA/D** | **Notes** |
 ----|---:|---:|---:|---:|:--|---:|---:|---:|---:|---:|----|
 Mirror | <script>h('Mirror')</script> | 113.10 | 1962 | 0 | Yes | 3.30 | 1.39 | 46 | 10.90 | 41.97 |   |
-RS Feva XL | <script>h('RS Feva XL')</script> | 105.20 | 2002 | 0 | Asymmetric | 3.64 | 1.42 | 63 | 8.55 | 54.89 |   |
+Alpha One | 1250? | 107? | 1985 | 0 | No | 4.34 | 1.68 | 91 | 8.36 | 41.42 | Obscure Pacific Northwest university team boat <!-- LWL: 4.22m -->
+RS Feva S | 1250? | 107? | 2002 | 0 | Asymmetric | 3.64 | 1.42 | 63 | 13.60 | 48.10 |
+RS Feva XL/Race | <script>h('RS Feva XL')</script> | 105.20 | 2002 | 0 | Asymmetric | 3.64 | 1.42 | 63 | 14.60 | 54.89 |   |
 International FJ | <script>h('International FJ')</script> | 97.90 | 1956 | 0 | Yes | 4.03 | 1.60 | 75 | 17.66 | 55.35 | Latest revision circa 1980 |
 Enterprise | <script>h('Enterprise')</script> | 92.60 | 1956 | 0 | No | 4.04 | 1.60 |  91 | 10.68 | 53.84 | Spinnaker permitted in some regions
 International 420 | <script>h('International 420')</script> | 97.20 | 1959 | 1 | Yes | 4.20 | 1.65 | 100 | 19.08 | 61.52 | Massively popular, at the level of the Laser |
@@ -249,13 +251,27 @@ handle.
 
 ## Upwind SA/D
 
-Sail area to displacement ratio. Higher is faster. _All_ of these
+(Curved) sail area to displacement ratio. Higher is faster. _All_ of these
 boats have ratios that are more than twice typical fast keelboat ratios.
 Note that the handicaps track the SA/D ratios closely; this is a very
 good predictor of upwind performance.
 
 The sail area and displacement numbers can be measured in various ways, 
 though, so the numbers aren't perfectly comparable between boats.
+
+\begin{eqnarray}
+\nonumber
+\mbox{"SA/D"} &=& \dfrac{\mbox{sail area} ~ [\mbox{ft}^2]}{\left(\mbox{displacement} ~ [\mbox{ft}^3]\right)^{2/3}} \\
+\nonumber\\
+\nonumber
+&=& \dfrac{\mbox{sail area} ~ [\operatorname{ft}^2]}{\left(\frac{1}{64} \mbox{displacement}~[\operatorname{lbs}]\right)^{2/3}} \\
+\nonumber\\
+\nonumber
+&=& \dfrac{\mbox{sail area} ~ [\mbox{m}^2]}{\left(\frac{1}{1006}\mbox{displacement}~[\mbox{kg}]\right)^{2/3}} \\
+\nonumber\\
+\nonumber
+&=& \dfrac{\mbox{sail area} ~ [\mbox{m}^2]}{\left(\mbox{displacement}~[\mbox{m}^3]\right)^{2/3}}
+\end{eqnarray}
 
 ![The RS500 offers modern performance and streamlined controls for a 420-like form, but the class is small and almost exclusively in UK and Europe.](rs500.jpg attrib="RS Sailing" attriburl="https://www.rssailing.com/project/rs500/")
 

@@ -105,6 +105,7 @@ const Portsmouth = {
         'RS 200': 1050,
         'Scorpion': 1042,
         'Tasar': 1019,
+        'Vanguard 15': 1012, 
         'Merlin Rocket': 983,
         'Buccaneer 18': 978,
         'International 470': 973,

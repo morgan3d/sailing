@@ -84,7 +84,7 @@ const Portsmouth = {
         'RS 100 10.2': 981,
         'RS 300': 965,
         'Contender': 969,
-        'Swift Solo': 900,
+        'Swift Solo': 889,
         'Musto Skiff': 834,
         'RS 700': 845,
         'International Moth': 570,

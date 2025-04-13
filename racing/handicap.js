@@ -92,6 +92,8 @@ const Portsmouth = {
 
         // Double-handed
         'Mirror': 1368,
+        'Alpha One': 1250,
+        'RS Feva S': 1250,
         'RS Feva XL': 1244,
         'International FJ': 1126,
         'Enterprise': 1137,

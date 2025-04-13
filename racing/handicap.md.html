@@ -1,6 +1,6 @@
      <meta charset="utf-8" emacsmode="-*-markdown-*-"><link rel="shortcut icon" type="image/png" href="../compass-rose.png">
                   **Sailboat Racing Handicaps**
-            Published 2023-06-29; Updated 2025-03-07
+            Published 2023-06-29; Updated 2025-04-13
 
 <script src="handicap.js"></script>
 
@@ -25,9 +25,10 @@ longer offshore races. I do not discuss it here.
 Previous handicap systems such as IOR, IMS, and US DPN are now obsolete.
 
 <script>
-// Boats at Conestoga, Cadboro Bay, and RVYC
+// Boats at Conestoga, Cadboro Bay Sailing Association, and RVYC
 const common_boatarray = [
         'RS Zest',
+        'Alpha One',
         'Topaz Uno Plus',
         'Hartley H12 Racer',
         'Enterprise',
@@ -57,8 +58,9 @@ common_boatarray.sort(function (A, B) {
 Conversion
 ========================================================================
 
-Approximate conversions between PHRF, RYA Portsmouth Numbers (PN), and
-US Sailing Dixie Portsmouth Numbers (DPN) are below. The DPN to PN
+Approximate conversions between [Performance Handicap Racing Fleet](https://www.ussailing.org/competition/offshore/phrf/)(PHRF), 
+[RYA/US Sailing Portsmouth Numbers](https://www.rya.org.uk/racing/technical/handicap-systems/portsmouth-yardstick) (PN), and
+[US Sailing Dixie Portsmouth Numbers](https://www.ussailing.org/wp-content/uploads/2018/01/2017-Portsmouth-Precalculated-Classes.pdf) (DPN) are below. The DPN to PN
 conversion is based on fitting a line to the handicaps for the same
 boats under the different systems, and could vary slightly depending
 on the year in which it is computed.
@@ -70,6 +72,193 @@ PN &=& \tfrac{100}{6} \times DPN - 462 \\
 PN &=& 100 \times PHRF - 455 \\
 PHRF &=& (PN - 455) \div 100
 \end{eqnarray}
+
+
+
+Portsmouth
+========================================================================
+
+The Portsmouth Number $PN$ is a unitless quantity in the RYA
+Portsmouth Yardstick system. It is adjusted regionally each year based
+on collected performance across clubs, and then per club in some
+cases.  See [single-handed](../dinghies/dinghy1.md.html) and
+[double-handed](../dinghies/dinghy2.md.html) dinghy handicap tables in
+the respective articles.
+
+PNs happen to be calibrated such that almost all boats have a higher
+corrected time _CT_ than elapsed time _ET_. That is, PN makes most
+boats virtually slower and is a disadvantage-based system.
+
+Popular midrange performance dinghies including 420, ILCA 7 (Laser),
+Wayfarer, GP14, Hadron H2, RS200, RS Aero 7, and the Europe are all
+relatively close to each other around $PN = 1100$. Lower $PN$ numbers
+are faster boats, higher numbers are slower boats.
+
+Corrected Time
+---------------------------------------------------------------
+
+The corrected time _CT_ for a boat with elapsed time _ET_ and
+Portsmouth number _PN_ is given by:
+
+\begin{equation}
+CT = ET \times \dfrac{1000}{PN}
+\end{equation}
+
+
+Lead Times
+------------------------------------------------------------------
+How much time do you need to beat another boat by to rank higher
+than it?
+
+A faster boat _f_ ranks higher in the race than a slower boat _s_
+if _s_ finishes more than
+
+\begin{equation}
+\Delta T > ET_f \left(\dfrac{PN_s}{PN_f} - 1\right)
+\end{equation}
+
+seconds later. Conversely, boat _s_ ranks higher if it finishes
+less than $\Delta T$ seconds later.
+
+For example, in a race that a Laser 6 finishes in 
+$ET$ = 20 minutes, these boats need to finish by the following
+elapsed times to tie it:
+
+<script>
+{
+let s = `
+Class    | PN   | Adjustment | &pm;mm:ss | ET To Tie ILCA 6 |
+---------|-----:|-----------:|---------:|----------:|
+`;
+
+const ET_f = 20 * secondsPerMinute;
+const PN_f = Portsmouth.handicap['ILCA 6'];
+
+for (const boat of common_boatarray) {
+    const PN_s = Portsmouth.handicap[boat];
+    const deltaT = ET_f * (PN_s / PN_f - 1);
+    const ET_s = ET_f + deltaT;
+    s += `${boat} | ${PN_s} | ${formatTime(deltaT, 'delta s')} | ${formatTime(deltaT, 'delta m:ss')} | ${formatTime(ET_s, 'm:ss')} \n`;
+}
+
+document.write(s);
+}
+</script>
+
+
+Pursuit Offsets
+----------------------------------------------------------------
+In a pursuit race, the start times for each class are offset
+so that all boats should finish at the same time. This means
+that the rankings are based finish order and no correction
+is needed after the race.
+
+Let $PN_Z$ be the Portsmouth number of the slowest, "scratch" boat
+class and $ET_Z$ be the anticipated elapsed time for
+a boat in that class on the course. The offset start time
+for another class is:
+
+\begin{equation}
+\Delta T = ET_Z \times \left(1 - \dfrac{PN}{PN_Z}\right)
+\end{equation}
+
+For example, in a pursuit race that an RS Zest will start at 13:00 (1:00 PM) and
+is expected to complete in 2.0 hours, the start times for the other
+boats should be:
+
+<script>
+{
+let s = `
+Class    | PN   | Start Adjustment | &pm;mm:ss | Start Time
+---------|-----:|-----------:|--------:|----------:
+`;
+
+const ET_Z = 2.0 * secondsPerHour;
+const PN_Z = Portsmouth.handicap['RS Zest'];
+
+for (const boat of common_boatarray) {
+    const PN = Portsmouth.handicap[boat];
+    const deltaT = ET_Z * (1 - PN / PN_Z);
+    const startT = deltaT + 13.00 * secondsPerHour;
+    s += `${boat} | ${PN} | ${formatTime(deltaT, 'delta s')} | ${formatTime(deltaT, 'delta m:ss')} | ${formatTime(startT, 'h:mm:ss')} \n`;
+}
+
+document.write(s);
+}
+</script>
+
+This should match your intuition. The RS 800 $PN=799$ is about 2/3 of the RS Zest $PN=1260$,
+so the RS 800's expected elapsed time is about 2/3 as much as the Zest and it starts
+about 45 minutes later for a 120 minute race.
+
+
+#### Derivation
+
+For the derivation, I shorten the standard notation to $C = CT, E = ET, P = PN$
+and leave out the multiplication signs.
+
+The corrected times for the scratch boat $Z$ and another, faster boat
+are given by:
+
+\begin{eqnarray}
+\label{eqn:CZ} C_Z &=& E_Z \dfrac{1000}{P_Z} \\
+C &=& E \dfrac{1000}{P} \\
+\end{eqnarray}
+
+Our goal is for all boats to finish at the same wall clock time of day
+with staggered starts. That means for each boat
+
+\begin{equation}
+E + \Delta T = E_Z
+\end{equation}
+
+The elapsed time $E_Z$ of the scratch boat is fixed. We need to find
+the $\Delta T$ such that on corrected time, $C_Z = C$ and all boats
+would tie. Rearranging to expose the key variables gives:
+
+\begin{eqnarray}
+\Delta T &=& E_Z - E \\
+E &=& C \dfrac{P}{1000} \\
+E_Z &=& C_Z \dfrac{P_Z}{1000} \\
+C &=& C_Z
+\end{eqnarray}
+
+Substituting and simplifying provides the solution:
+
+\begin{eqnarray}
+\Delta T &=& C_Z \dfrac{P_Z}{1000} - C_Z \dfrac{P}{1000}\\
+\Delta T &=& C_Z \dfrac{P_Z - P}{1000}
+\end{eqnarray}
+
+We need this in terms of the actual elapsed time of the scratch boat, $E_Z$,
+so substitute that from equation \ref{eqn:CZ}:
+
+\begin{eqnarray}
+\Delta T &=& E_Z \dfrac{1000}{P_Z}  \dfrac{P_Z - P}{1000}\\
+\Delta T &=& E_Z \dfrac{P_Z - P}{P_Z}\\
+\Delta T &=& E_Z \left(1 - \dfrac{P}{P_Z}\right)
+\end{eqnarray}
+
+
+Portsmouth Yardstick Table
+---------------------------------------------------
+
+<script>
+{
+const boatarray = Object.keys(Portsmouth.handicap);
+boatarray.sort(function (A, B) {
+    return Portsmouth.handicap[B] - Portsmouth.handicap[A];
+});
+
+let s = '\nClass    |   PY (2025)\n---------|-------------:\n';
+for (let boat of boatarray) {
+    s += boat + ' | ' + Portsmouth.handicap[boat] + '\n';
+}
+
+document.write(s);
+}
+</script>
+
 
 PHRF
 ========================================================================
@@ -146,192 +335,6 @@ Where $M$ is the mean (average) $PHRF$ over all boats in the fleet and $k$
 is a regionally varying constant that is usually between 550 and 650.
 
 
-Portsmouth
-========================================================================
-
-The Portsmouth Number $PN$ is a unitless quantity in the RYA
-Portsmouth Yardstick system. It is adjusted regionally each year based
-on collected performance across clubs, and then per club in some
-cases.  See [single-handed](../dinghies/dinghy1.md.html) and
-[double-handed](../dinghies/dinghy2.md.html) dinghy handicap tables in
-the respective articles.
-
-PNs happen to be calibrated such that almost all boats have a higher
-corrected time _CT_ than elapsed time _ET_. That is, PN makes most
-boats virtually slower and is a disadvantage-based system.
-
-Popular midrange performance dinghies including 420, ILCA 7 (Laser),
-Wayfarer, GP14, Hadron H2, RS200, RS Aero 7, and the Europe are all
-relatively close to each other around $PN = 1100$. Lower $PN$ numbers
-are faster boats, higher numbers are slower boats.
-
-Corrected Time
----------------------------------------------------------------
-
-The corrected time _CT_ for a boat with elapsed time _ET_ and
-Portsmouth number _PN_ is given by:
-
-\begin{equation}
-CT = ET \times \dfrac{1000}{PN}
-\end{equation}
-
-
-Lead Times
-------------------------------------------------------------------
-How much time do you need to beat another boat by to rank higher
-than it?
-
-A faster boat _f_ ranks higher in the race than a slower boat _s_
-if _s_ finishes more than
-
-\begin{equation}
-\Delta T > ET_f \left(\dfrac{PN_s}{PN_f} - 1\right)
-\end{equation}
-
-seconds later. Conversely, boat _s_ ranks higher if it finishes
-less than $\Delta T$ seconds later.
-
-For example, in a race that a Laser 7 finishes in 
-$ET$ = 20 minutes, these boats need to finish by the following
-elapsed times to tie it:
-
-<script>
-{
-let s = `
-Class    | PN   | Adjustment | &pm;mm:ss | ET To Tie ILCA 7 |
----------|-----:|-----------:|---------:|----------:|
-`;
-
-const ET_f = 20 * secondsPerMinute;
-const PN_f = Portsmouth.handicap['ILCA 7'];
-
-for (const boat of common_boatarray) {
-    const PN_s = Portsmouth.handicap[boat];
-    const deltaT = ET_f * (PN_s / PN_f - 1);
-    const ET_s = ET_f + deltaT;
-    s += `${boat} | ${PN_s} | ${formatTime(deltaT, 'delta s')} | ${formatTime(deltaT, 'delta m:ss')} | ${formatTime(ET_s, 'm:ss')} \n`;
-}
-
-document.write(s);
-}
-</script>
-
-
-Pursuit Offsets
-----------------------------------------------------------------
-In a pursuit race, the start times for each class are offset
-so that all boats should finish at the same time. This means
-that the rankings are based finish order and no correction
-is needed after the race.
-
-Let $PN_Z$ be the Portsmouth number of the slowest, "scratch" boat
-class and $ET_Z$ be the anticipated elapsed time for
-a boat in that class on the course. The offset start time
-for another class is:
-
-\begin{equation}
-\Delta T = ET_Z \times \left(1 - \dfrac{PN}{PN_Z}\right)
-\end{equation}
-
-For example, in a pursuit race that an RS Zest will start at 14:30 (2:30 PM) and
-is expected to complete in 1.5 hours, the start times for the other
-boats should be:
-
-<script>
-{
-let s = `
-Class    | PN   | Start Adjustment | &pm;mm:ss | Start Time
----------|-----:|-----------:|--------:|----------:
-`;
-
-const ET_Z = 1.5 * secondsPerHour;
-const PN_Z = Portsmouth.handicap['RS Zest'];
-
-for (const boat of common_boatarray) {
-    const PN = Portsmouth.handicap[boat];
-    const deltaT = ET_Z * (1 - PN / PN_Z);
-    const startT = deltaT + 14.5 * secondsPerHour;
-    s += `${boat} | ${PN} | ${formatTime(deltaT, 'delta s')} | ${formatTime(deltaT, 'delta m:ss')} | ${formatTime(startT, 'h:mm:ss')} \n`;
-}
-
-document.write(s);
-}
-</script>
-
-This should match your intuition. The RS 800 $PN=799$ is about 2/3 of the RS Zest $PN=1260$,
-so the RS 800's expected elapsed time is about 2/3 as much as the Zest and it starts
-about 30 minutes later for a 90 minute race.
-
-
-#### Derivation
-
-For the derivation, I shorten the standard notation to $C = CT, E = ET, P = PN$
-and leave out the multiplication signs.
-
-The corrected times for the scratch boat $Z$ and another, faster boat
-are given by:
-
-\begin{eqnarray}
-\label{eqn:CZ} C_Z &=& E_Z \dfrac{1000}{P_Z} \\
-C &=& E \dfrac{1000}{P} \\
-\end{eqnarray}
-
-Our goal is for all boats to finish at the same wall clock time of day
-with staggered starts. That means for each boat
-
-\begin{equation}
-E + \Delta T = E_Z
-\end{equation}
-
-The elapsed time $E_Z$ of the scratch boat is fixed. We need to find
-the $\Delta T$ such that on corrected time, $C_Z = C$ and all boats
-would tie. Rearranging to expose the key variables gives:
-
-\begin{eqnarray}
-\Delta T &=& E_Z - E \\
-E &=& C \dfrac{P}{1000} \\
-E_Z &=& C_Z \dfrac{P_Z}{1000} \\
-C &=& C_Z
-\end{eqnarray}
-
-Substituting and simplifying provides the solution:
-
-\begin{eqnarray}
-\Delta T &=& C_Z \dfrac{P_Z}{1000} - C_Z \dfrac{P}{1000}\\
-\Delta T &=& C_Z \dfrac{P_Z - P}{1000}
-\end{eqnarray}
-
-We need this in terms of the actual elapsed time of the scratch boat, $E_Z$,
-so substitute that from equation \ref{eqn:CZ}:
-
-\begin{eqnarray}
-\Delta T &=& E_Z \dfrac{1000}{P_Z}  \dfrac{P_Z - P}{1000}\\
-\Delta T &=& E_Z \dfrac{P_Z - P}{P_Z}\\
-\Delta T &=& E_Z \left(1 - \dfrac{P}{P_Z}\right)
-\end{eqnarray}
-
-
-Portsmouth Yardstick Table
-====================================================================
-
-<script>
-{
-const boatarray = Object.keys(Portsmouth.handicap);
-boatarray.sort(function (A, B) {
-    return Portsmouth.handicap[B] - Portsmouth.handicap[A];
-});
-
-let s = '\nClass    |   PY (2025)\n---------|-------------:\n';
-for (let boat of boatarray) {
-    s += boat + ' | ' + Portsmouth.handicap[boat] + '\n';
-}
-
-document.write(s);
-}
-</script>
-
-
-
 
 
 <style>
@@ -349,4 +352,5 @@ vertical-align: top
 }
 </style>
 
+<script>var markdeepOptions = {tocStyle: 'long'};</script>
 <script src="../sailing.js"> </script>

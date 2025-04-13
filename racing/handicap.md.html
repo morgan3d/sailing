@@ -27,17 +27,21 @@ Previous handicap systems such as IOR, IMS, and US DPN are now obsolete.
 <script>
 // Boats at Conestoga, Cadboro Bay Sailing Association, and RVYC
 const common_boatarray = [
-        'RS Zest',
+        /* 'RS Zest', */
+    /* 'Topaz Uno Plus',*/
         'Alpha One',
-        'Topaz Uno Plus',
         'Hartley H12 Racer',
         'Enterprise',
         'International 420',
         'ILCA 6',
+        'RS Aero 6',
+        'Megabyte',
         'Byte CII',
         'Wayfarer',
+        'Club FJ',
         'ILCA 7',
         'Tasar',
+        'Laser 2',
         'Laser Vago',
         'RS Aero 7',
         'RS Aero 9',
@@ -162,7 +166,7 @@ for another class is:
 \Delta T = ET_Z \times \left(1 - \dfrac{PN}{PN_Z}\right)
 \end{equation}
 
-For example, in a pursuit race that an RS Zest will start at 13:00 (1:00 PM) and
+For example, in a pursuit race that an Alpha One will start at 13:00 (1:00 PM) and
 is expected to complete in 2.0 hours, the start times for the other
 boats should be:
 
@@ -174,7 +178,7 @@ Class    | PN   | Start Adjustment | &pm;mm:ss | Start Time
 `;
 
 const ET_Z = 2.0 * secondsPerHour;
-const PN_Z = Portsmouth.handicap['RS Zest'];
+const PN_Z = Portsmouth.handicap['Alpha One'];
 
 for (const boat of common_boatarray) {
     const PN = Portsmouth.handicap[boat];
@@ -187,8 +191,8 @@ document.write(s);
 }
 </script>
 
-This should match your intuition. The RS 800 $PN=799$ is about 2/3 of the RS Zest $PN=1260$,
-so the RS 800's expected elapsed time is about 2/3 as much as the Zest and it starts
+This should match your intuition. The RS 800 $PN=799$ is about 2/3 of the Alpha One $PN=1250$,
+so the RS 800's expected elapsed time is about 2/3 as much as the Alpha One and it starts
 about 45 minutes later for a 120 minute race.
 
 

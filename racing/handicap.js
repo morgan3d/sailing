@@ -95,6 +95,7 @@ const Portsmouth = {
         'Alpha One': 1250,
         'RS Feva S': 1250,
         'RS Feva XL': 1244,
+        'Club FJ': 1163,
         'International FJ': 1126,
         'Enterprise': 1137,
         'International 420': 1110,
